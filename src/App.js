@@ -5,7 +5,7 @@ import './App.css';
 
 function App() {
   return (
-    <Eatlas defaultURL={process.env.DEFAULT_URL}/>
+    <Eatlas defaultURL={process.env.REACT_APP_DEFAULT_URL}/>
   );
 }
 
