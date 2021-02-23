@@ -1,12 +1,11 @@
+import React from 'react';
+import Eatlas from 'eatlas';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Hello eAtlas</p>
-      </header>
-    </div>
+    <Eatlas />
   );
 }
 
