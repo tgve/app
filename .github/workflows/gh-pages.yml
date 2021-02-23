@@ -17,11 +17,11 @@ jobs:
         - name: Checkout branch
           uses: actions/checkout@v2
 
-        - name: Clean install dependencies
-          run: npm ci
+        - name: Install dependencies
+          run: yarn install
     
-        - name: Clean build
-          run: npm run build
+        - name: Build
+          run: yarn run build
           env:
             CI: false
             REACT_APP_DEFAULT_URL: https://raw.githubusercontent.com/layik/eatlas-data/main/casualties.csv 
