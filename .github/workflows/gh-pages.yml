@@ -1,8 +1,9 @@
 name: Deploy to github pages
 
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - main
 
 jobs:
     gh-pages-deploy:
@@ -27,8 +28,8 @@ jobs:
             REACT_APP_MAPBOX_ACCESS_TOKEN: ${{secrets.MAPBOX_KEY}}
 
         - name: Run deploy script
+          # git config user.name "layik" && git config user.email "layik.hama@gmail.com"
           run: |
-            # git config user.name "layik" && git config user.email "layik.hama@gmail.com"
             git checkout --orphan gh-pages
             git --work-tree build add --all
             git --work-tree build commit -m 'Deploy'
