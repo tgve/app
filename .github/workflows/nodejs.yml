@@ -9,7 +9,9 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+      # error jest-diff@26.6.2: The engine "node" is incompatible with this module. 
+      # Expected version ">= 10.14.2". Got "8.17.0"
+        node-version: [10.x, 12.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -17,7 +19,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
+    - name: Yarn install && Test
       run: |
         yarn install
         yarn run test
