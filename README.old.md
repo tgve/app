@@ -1,2 +1,0 @@
-# eatlas-template
-Template Repo
