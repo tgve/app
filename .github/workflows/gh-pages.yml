@@ -37,7 +37,8 @@ jobs:
         - name: Run deploy script
           # git config is required
           run: |
-            git config user.name "layik" && git config user.email "layik.hama@gmail.com"
+            git config user.name "github-actions[bot]" 
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git checkout --orphan gh-pages
             git --work-tree build add --all
             git --work-tree build commit -m 'Deploy'
