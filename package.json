@@ -33,10 +33,11 @@
     ]
   },
   "devDependencies": {
-    "jest-canvas-mock": "^2.3.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "jest-canvas-mock": "^2.3.1",
     "react-scripts": "3.4.4"
-  }
+  },
+  "homepage": "https://layik.github.io/eAtlas-template"
 }
