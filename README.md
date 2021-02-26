@@ -7,11 +7,11 @@ The aim of this repo is to host your own instance of Turing Geovisualization Eng
 This should be three simple steps:
 
 1. Create repo from this template
-<img width="100%" style="border:1px solid" alt="Screenshot 2021-02-25 at 21 36 10" src="https://user-images.githubusercontent.com/408568/109221954-82a99280-77b1-11eb-97c1-7272781d6136.png">
+<img width="100%" style="border:1px solid" alt="Use this template button in green" src="https://user-images.githubusercontent.com/408568/109291248-a8ba4b80-7820-11eb-9054-5b8fb6f38f82.png">
 
 2. Edit the data URL in gh-pages.yml with [URL](https://github.com/layik/eatlas-template/blob/main/.github/workflows/gh-pages.yml#L34) of your dataset. So replace `https://raw.githubusercontent.com/layik/eatlas-data/main/casualties.csv` with your data URL.
 3. Once first actions build is finished, a `gh-actions` is built, enable gh-pages by assigning branch `gh-pages` and `root` as the directorry as shown below:
-<img width="100%" style="border:1px solid" alt="Screenshot 2021-02-25 at 21 34 03" src="https://user-images.githubusercontent.com/408568/109220743-39f1d980-77b1-11eb-9bd0-4b5e183854d5.png">
+<img width="100%" style="border:1px solid" alt="Setup github pages" src="https://user-images.githubusercontent.com/408568/109220743-39f1d980-77b1-11eb-9bd0-4b5e183854d5.png">
 
 
 You should now have an instance at `https://OWNER.github.io/REPO_NAME`
