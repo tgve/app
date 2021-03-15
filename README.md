@@ -1,26 +1,27 @@
 # eatlas-template
-Template Repo
-
-## Using this template repo
-The aim of this repo is to host your own instance of Turing Geovisualization Engine on github pages.
+## Use
+The aim of this repo is to host your own instance of Turing Geovisualization Engine on github pages. 
 
 This should be three simple steps:
 
 1. Create repo from this template
 <img width="100%" style="border:1px solid" alt="Use this template button in green" src="https://user-images.githubusercontent.com/408568/109291248-a8ba4b80-7820-11eb-9054-5b8fb6f38f82.png">
 
-2. Edit the data URL in gh-pages.yml with [URL](https://github.com/layik/eatlas-template/blob/main/.github/workflows/gh-pages.yml#L34) of your dataset. So replace `https://raw.githubusercontent.com/layik/eatlas-data/main/casualties.csv` with your data URL.
+2. Edit the data URL in gh-pages.yml with [URL](https://github.com/layik/eatlas-template/blob/main/.github/workflows/gh-pages.yml#L34) of your dataset. So replace `https://raw.githubusercontent.com/layik/eatlas-data/main/casualties.csv` with your data URL. This is where we pass `REACT_APP_DEFAULT_URL` or `defaultURL` variable to eAtlas.
+
 3. Once first actions build is finished, a `gh-actions` is built, enable gh-pages by assigning branch `gh-pages` and `root` as the directorry as shown below:
 <img width="100%" style="border:1px solid" alt="Setup github pages" src="https://user-images.githubusercontent.com/408568/109220743-39f1d980-77b1-11eb-9bd0-4b5e183854d5.png">
 
 
 You should now have an instance at `https://OWNER.github.io/REPO_NAME`
 
-## CSV + Geography
+In step (2) the tempate includes point data with geography defined in the columns. eAtlas is able to parse the CSV file and pull out the points from the file using [`csv2geojson`](https://github.com/mapbox/csv2geojson) package by Mapbox. You can also define your own Mapbox API key as does this template repo in your github secrets section.
 
-Many people do not have ready to consume (`GeoJSON`) data, from version `1.1.0-beta.0` release (still in beta) eAtlas can take georaphy data separately. To do this eAtlas expects a CSV and geography (must be GeoJSON). If you like to use this template follow the same three steps above, except in (2):
+## Separate geography source
 
-Replace `https://raw.githubusercontent.com/layik/eatlas-data/main/casualties.csv` with your data URL which does not have geography. Additionally, add two or or more environmental varibles, or if you are using it in your Node/JS application then as properties to the eAtlas component. In the case of using this template, the `.github/workflows/gh-pages.yml looks like:
+Many people do not have ready to consume (`GeoJSON`) data or CSS of point data. From version `1.1.0-beta.0` release (still in beta) eAtlas can take georaphy data source separately. To do this eAtlas expects a CSV and geography (must be GeoJSON). Other formats as data source is currently not supported. To pass the data and geography URLs to eAtlas, follow the same three steps above, except in (2):
+
+Replace `https://raw.githubusercontent.com/layik/eatlas-data/main/casualties.csv` with your data URL which does not have geography. Additionally, add two or or more environmental varibles. That is, the `.github/workflows/gh-pages.yml would look like:
 
 ```yml
 ...
@@ -31,8 +32,7 @@ Replace `https://raw.githubusercontent.com/layik/eatlas-data/main/casualties.csv
 ...
 ```
 
-See the [eAtlas](https://github.com/layik/eAtlas) repo guide notes for more about those variables.
-
+Checkout the `src/App.js` file to see how you can pass these variables to the React eAtlas component. Check out the [eAtlas](https://github.com/layik/eAtlas) repo guide notes for more about these variables.
 
 ## Notes
 
