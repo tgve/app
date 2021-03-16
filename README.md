@@ -22,7 +22,7 @@ In step (2) the template includes point data with geography defined in the colum
 
 ## Separate geography source
 
-Many people do not have ready to consume (`GeoJSON`) data or CSS of point data. From version `1.1.0-beta.0` release (still in beta) eAtlas can take geography data source separately. To do this eAtlas expects a CSV and geography (must be GeoJSON). Other formats as data source is currently not supported. To pass the data and geography URLs to eAtlas, follow the same three steps above, except in (2):
+Many people do not have ready to consume (`GeoJSON`) data or CSV of point data. From version `1.1.0-beta.0` release (still in beta) eAtlas can take geography data source separately. To do this eAtlas expects a CSV and geography (must be GeoJSON). Other formats as data source is currently not supported. To pass the data and geography URLs to eAtlas, follow the same three steps above, except in (2):
 
 Replace `https://raw.githubusercontent.com/layik/eatlas-data/main/casualties.csv` with your data URL which does not have geography. Additionally, add two or or more environmental variables. That is, the `.github/workflows/gh-pages.yml` would look like:
 
