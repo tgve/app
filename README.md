@@ -1,4 +1,5 @@
-# eAtlas-template
+# eAtlas-template [![Deploy to github pages](https://github.com/layik/eatlas-template/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/layik/eatlas-template/actions/workflows/gh-pages.yml) [![npm version](https://badge.fury.io/js/eatlas.svg)](https://badge.fury.io/js/eatlas)
+
 This is a template repository to use the Turing Geo-visualization Engine (TGVE or eAtlas) in a React app and deploying it in github pages.
 
 ## Use
@@ -56,3 +57,4 @@ Checkout the `src/App.js` file to see how you can pass these variables to the Re
 
 * Locked react-scripts version to `3.4.4` due to a `url-loader` [issue](https://github.com/facebook/create-react-app/issues/9870).
 
+* `gh-pages.yml` runner does few things: first it replaces the default values from the fork in `package.json`. See the script for exactly how this is done.
