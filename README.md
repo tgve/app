@@ -38,6 +38,14 @@ Replace `https://raw.githubusercontent.com/layik/eatlas-data/main/casualties.csv
 
 Checkout the `src/App.js` file to see how you can pass these variables to the React eAtlas component. Check out the [eAtlas](https://github.com/layik/eAtlas) repo guide notes for more about these variables.
 
+## Run this app locally (dev)
+This is a [Create React App](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app) and you can run it locally. You would need NodeJS and either yarn or npm [setup](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm). If you have those setup on your system then:
+1. Cloning this repository
+2. Running `yarn`
+3. and `yarn start`
+
+Then visit `http:localhost:3000` to see the running application.
+
 ## Notes
 
 ### Generic notes
