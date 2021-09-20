@@ -44,7 +44,7 @@ This is a [Create React App](https://reactjs.org/docs/create-a-new-react-app.htm
 2. Running `yarn`
 3. and `yarn start`
 
-Then visit `http:localhost:3000` to see the running application.
+Then visit `http://localhost:3000` to see the running application.
 
 ## Notes
 
