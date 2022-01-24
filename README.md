@@ -11,7 +11,7 @@ To achieve this, follow these three steps:
 <img width="100%" style="border:1px solid" alt="Use this template button in green" src="https://user-images.githubusercontent.com/408568/109291248-a8ba4b80-7820-11eb-9054-5b8fb6f38f82.png">
 You should now have an instance at `https://github.com/USER_OR_ORG/FORK_REPO_NAME`
 
-2. Edit the data URL in gh-pages.yml with [URL](https://github.com/layik/eatlas-template/blob/main/.github/workflows/gh-pages.yml#L34) of your dataset. So replace `https://raw.githubusercontent.com/layik/eatlas-data/main/casualties.csv` with your data URL. This is where we pass `REACT_APP_DEFAULT_URL` or `defaultURL` variable to eAtlas.
+2. Edit the data URL in `gh-pages.yml` with [URL](https://github.com/layik/eatlas-template/blob/main/.github/workflows/gh-pages.yml#L34) of your dataset. So replace `https://raw.githubusercontent.com/layik/eatlas-data/main/casualties.csv` with your data URL. This is where we pass `REACT_APP_DEFAULT_URL` or `defaultURL` variable to eAtlas.
 
 3. As you fork the repo and whether you follow step (2) or not, the defined actions in `.github/workflows` will be executed by github. Once a first build is done, it will create a separate branch to your `main` branch called `gh-pages`. Go ahead and enable gh-pages by assigning branch `gh-pages` and `root` as the directory as shown below from your fork's settings:
 <img width="100%" style="border:1px solid" alt="Setup github pages" src="https://user-images.githubusercontent.com/408568/109220743-39f1d980-77b1-11eb-9bd0-4b5e183854d5.png">
@@ -23,7 +23,9 @@ In step (2) the template includes point data with geography defined in the colum
 
 ## Separate geography source
 
-Many people do not have ready to consume (`GeoJSON`) data or CSV of point data. From version `1.1.0-beta.0` release (still in beta) eAtlas can take geography data source separately. To do this eAtlas expects a CSV and geography (must be GeoJSON). Other formats as data source is currently not supported. To pass the data and geography URLs to eAtlas, follow the same three steps above, except in (2):
+Many people do not have ready to consume (`GeoJSON`) data or CSV of point data. From version `1.1.0-beta.0` release (still in beta) eAtlas [can](https://github.com/tgve/eAtlas) take geography data source separately. To do this eAtlas expects a CSV and geography (must be GeoJSON). Other formats as data source is currently not supported. 
+
+To pass the data and geography URLs to this app/repository, follow the same three steps above, except in (2):
 
 Replace `https://raw.githubusercontent.com/layik/eatlas-data/main/casualties.csv` with your data URL which does not have geography. Additionally, add two or or more environmental variables. That is, the `.github/workflows/gh-pages.yml` would look like:
 
@@ -31,8 +33,8 @@ Replace `https://raw.githubusercontent.com/layik/eatlas-data/main/casualties.csv
 ...
   REACT_APP_DEFAULT_URL: https://yourdata.url/data.csv 
   REACT_APP_GEOGRAPHY_URL: https://geography.url/geo.json
-  REACT_APP_GEOGRAPHY_COLUMN_NAME: COLUMN_NAME
-  REACT_APP_COLUMN_NAME: ANOTHER_COLUMN_NAME
+  REACT_APP_GEOGRAPHY_COLUMN_NAME: GEO_COLUMN_NAME
+  REACT_APP_COLUMN_NAME: VIS_COLUMN_NAME
 ...
 ```
 
@@ -50,7 +52,7 @@ Then visit `http://localhost:3000` to see the running application.
 
 ### Generic notes
 
-* Template uses the beta release of of eAtlas. This will be updated as `eatlas` package grows.
+* Template uses the latest release of of eAtlas. This will be updated as `eatlas` package grows.
 
 * Pending above, more settings will be coming to this repo such as disabling the sidebar, defining sidebar contents, and customizing the default visualizations.
   
