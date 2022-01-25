@@ -1,11 +1,6 @@
 # tgve/app [![Deploy to github pages](https://github.com/layik/eatlas-template/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/layik/eatlas-template/actions/workflows/gh-pages.yml) [![npm version](https://badge.fury.io/js/eatlas.svg)](https://badge.fury.io/js/eatlas)
 
-This is a template repository to use the Turing Geo-visualization Engine (TGVE or eAtlas) in a React app and deploying it in github pages.
-
-## Use
-The aim of this repo is to host your own instance of TGVE on your fork's github pages. 
-
-To achieve this, follow these three steps:
+This is a template repository which makes it easy to host your own instance of the Turing Geo-visualization Engine (TGVE) on your fork's GitHub Pages. To achieve this, follow these three steps:
 
 1. Create repo from this template
 <img width="100%" style="border:1px solid" alt="Use this template button in green" src="https://user-images.githubusercontent.com/408568/109291248-a8ba4b80-7820-11eb-9054-5b8fb6f38f82.png">
