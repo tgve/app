@@ -15,7 +15,9 @@ You should now have an instance at `https://USER_OR_ORG.github.io/FORK_REPO_NAME
 
 What did we do? The repo you set up has a branch called `gh-pages` which GitHub uses to serve. The GitHub Actions workflows generate a
 production-ready app which pulls data from the link added in step (2). The following screenshot shows a repo with owner “layik” and repository
-name “eAtlas”. Your new instance will replace these two values with appropriate information obtained from the GitHub API.
+name “eAtlas”. Your new instance will replace these two values with appropriate information obtained from via GitHub API.
+
+<img width="50%" alt="guide-shot" src="https://user-images.githubusercontent.com/408568/108049506-44d59d00-7040-11eb-9f4e-0a083829bfa5.png">
 
 In step (2) the template includes point data with geography defined in the columns. eAtlas is able to parse the CSV file and pull out the points from the file using [`csv2geojson`](https://github.com/mapbox/csv2geojson) package by Mapbox. You can also define your own Mapbox API key as does this template repo in your github secrets section.
 
