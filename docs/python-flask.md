@@ -96,7 +96,7 @@ and amend the above script to:
 REACT_APP_DEFAULT_URL=http://localhost:5000/las.geojson yarn run build` 
 ```
 Now, the underlying TGVE instance would be looking at the above URL to fetch data.
-<img src="https://user-images.githubusercontent.com/408568/133994277-6f10f933-b990-4695-896e-2c2406277056.png" width="100%"/>
+<img width=50% src="https://user-images.githubusercontent.com/408568/133994277-6f10f933-b990-4695-896e-2c2406277056.png" width="100%"/>
 
 You can find the above Flask apps ready to use in this "full stack" template repository:
 https://github.com/tgve/full-template
