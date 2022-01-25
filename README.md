@@ -52,8 +52,4 @@ Then visit `http://localhost:3000` to see the running application.
 
 ### Technical
 
-* Current version locks mapbox (via `react-map-gl` & `plotly`) to 1.10.x to avoid license issues.
-
-* This template is a "clean" [CRA](https://github.com/facebook/create-react-app) app with eAtlas as the only component.
-
 * Locked react-scripts version to `3.4.4` due to a `url-loader` [issue](https://github.com/facebook/create-react-app/issues/9870).
