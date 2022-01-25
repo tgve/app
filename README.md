@@ -23,11 +23,7 @@ In step (2) the template includes point data with geography defined in the colum
 
 ## Separate geography source
 
-Many people do not have ready to consume (`GeoJSON`) data or CSV of point data. To support a separately-provided geography data source, eAtlas expects a CSV and geography (in GeoJSON). Other formats as data source are currently unsupported. 
-
-To pass the data and geography URLs to the React app, follow the same three steps above, except in (2):
-
-Replace `https://raw.githubusercontent.com/layik/eatlas-data/main/casualties.csv` with your data URL which does not have geography. Additionally, add two or or more environmental variables. That is, the `.github/workflows/gh-pages.yml` would look like:
+To pass the data and geography URLs to the React app, follow the three steps above. In step (2), replace `https://raw.githubusercontent.com/layik/eatlas-data/main/casualties.csv` with your data URL which does not have geography. Then supply geography information via environment variables set in `.github/workflows/gh-pages.yml` would look like:
 
 ```yml
 ...
@@ -38,7 +34,7 @@ Replace `https://raw.githubusercontent.com/layik/eatlas-data/main/casualties.csv
 ...
 ```
 
-Checkout the `src/App.js` file to see how you can pass these variables to the React eAtlas component. Check out the [eAtlas](https://github.com/layik/eAtlas) repo guide notes for more about these variables.
+Check out [`src/App.js`](src/App.js) to see how you can pass these variables to the React eAtlas component. See [eAtlas](https://github.com/tgve/eAtlas) for more about these variables.
 
 ## Run locally (dev)
 This is a [Create React App](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app) and you can run it locally. You would need NodeJS and either yarn or npm [setup](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm). If you have those setup on your system then:
