@@ -13,7 +13,7 @@ You should see something like:
 <img width="70%" src="https://user-images.githubusercontent.com/408568/145040206-7eb1b342-0898-45f6-afa7-5978ddd87dc5.png" alt="customise remote instnace" />
 
 
-Likewise, you can embed it in an `iframe` as follows (this Wiki is restricted to certain HTML elements, excluding `iframe`):
+Likewise, you can embed it in an `iframe` as follows (this document is restricted to certain HTML elements, excluding `iframe`):
 ```html
 <iframe srce="https://tgve.github.io/eatlas-template" />
 ```
