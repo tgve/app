@@ -23,9 +23,9 @@ In step (2) the template includes point data with geography defined in the colum
 
 ## Separate geography source
 
-Many people do not have ready to consume (`GeoJSON`) data or CSV of point data. From version `1.1.0-beta.0` release (still in beta) eAtlas [can](https://github.com/tgve/eAtlas) take geography data source separately. To do this eAtlas expects a CSV and geography (must be GeoJSON). Other formats as data source is currently not supported. 
+Many people do not have ready to consume (`GeoJSON`) data or CSV of point data. To support a separately-provided geography data source, eAtlas expects a CSV and geography (in GeoJSON). Other formats as data source are currently unsupported. 
 
-To pass the data and geography URLs to this app/repository, follow the same three steps above, except in (2):
+To pass the data and geography URLs to the React app, follow the same three steps above, except in (2):
 
 Replace `https://raw.githubusercontent.com/layik/eatlas-data/main/casualties.csv` with your data URL which does not have geography. Additionally, add two or or more environmental variables. That is, the `.github/workflows/gh-pages.yml` would look like:
 
