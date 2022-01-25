@@ -48,8 +48,6 @@ This is a [Create React App](https://reactjs.org/docs/create-a-new-react-app.htm
 
 Then visit `http://localhost:3000` to see the running application.
 
-## Notes
+## Technical notes
 
-### Technical
-
-* Locked react-scripts version to `3.4.4` due to a `url-loader` [issue](https://github.com/facebook/create-react-app/issues/9870).
+* `react-scripts` locked to `3.4.4` due to a `url-loader` [issue](https://github.com/facebook/create-react-app/issues/9870).
