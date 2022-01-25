@@ -54,9 +54,6 @@ Then visit `http://localhost:3000` to see the running application.
 
 * Template uses the latest release of of eAtlas. This will be updated as `eatlas` package grows.
 
-* Pending above, more settings will be coming to this repo such as disabling the sidebar, defining sidebar contents, and customizing the default visualizations.
-  
-
 ### Technical
 
 * Current version locks mapbox (via `react-map-gl` & `plotly`) to 1.10.x to avoid license issues.
