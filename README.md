@@ -1,3 +1,6 @@
+[![Deploy to github pages](https://github.com/layik/eatlas-template/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/layik/eatlas-template/actions/workflows/gh-pages.yml) 
+[![npm version](https://badge.fury.io/js/eatlas.svg)](https://badge.fury.io/js/eatlas)
+
 ## Deployed latest version
 
 This repo hosts a deployed instance of TGVE on [GitHub Pages](https://tgve.github.io/eatlas-template). Instructions for deploying your own instance are below.
@@ -18,8 +21,6 @@ Likewise, you can embed it in an `iframe` as follows (this document is restricte
 <iframe srce="https://tgve.github.io/eatlas-template" />
 ```
 ## Hosting your own instance
-
-[![Deploy to github pages](https://github.com/layik/eatlas-template/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/layik/eatlas-template/actions/workflows/gh-pages.yml) [![npm version](https://badge.fury.io/js/eatlas.svg)](https://badge.fury.io/js/eatlas)
 
 This is a template repository which makes it easy to host your own instance of the Turing Geo-visualization Engine (TGVE) on your fork's GitHub Pages. To achieve this, follow these three steps:
 
