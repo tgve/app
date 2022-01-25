@@ -1,6 +1,8 @@
-## Public instance of TGVE
+## Deployed latest version
 
-This repo also hosts a deployed instance of TGVE on [GitHub Pages](https://tgve.github.io/eatlas-template). You can pass your own geospatial data URL as `defaultURL=url` parameter as follows:
+This repo hosts a deployed instance of TGVE on [GitHub Pages](https://tgve.github.io/eatlas-template). Instructions for deploying your own instance are below.
+
+You can pass your own geospatial data URL as `defaultURL=url` parameter as follows:
 
 ```sh
 https://tgve.github.io/eatlas-template?defaultURL=https://raw.githubusercontent.com/layik/eatlas-data/main/casualties_100.geojson
@@ -13,7 +15,6 @@ Likewise, you can embed it in an `iframe` as follows (this Wiki is restricted to
 ```html
 <iframe srce="https://tgve.github.io/eatlas-template" />
 ```
-
 ## Hosting your own instance
 
 [![Deploy to github pages](https://github.com/layik/eatlas-template/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/layik/eatlas-template/actions/workflows/gh-pages.yml) [![npm version](https://badge.fury.io/js/eatlas.svg)](https://badge.fury.io/js/eatlas)
