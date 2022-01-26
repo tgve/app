@@ -1,9 +1,9 @@
 [![Deploy to github pages](https://github.com/layik/eatlas-template/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/layik/eatlas-template/actions/workflows/gh-pages.yml) 
 [![npm version](https://badge.fury.io/js/eatlas.svg)](https://badge.fury.io/js/eatlas)
 
-## Deployed latest version
+This repo both hosts a deployed instance of TGVE on [GitHub Pages](https://tgve.github.io/eatlas-template), and acts as a template that you can use to deploy your own instance.
 
-This repo both hosts a deployed instance of TGVE on [GitHub Pages](https://tgve.github.io/eatlas-template), and acts as a template that you can use to deploy your own instance. Instructions for deploying your own instance are below.
+## Deployed latest version
 
 You can pass your own geospatial data URL as `defaultURL=url` parameter as follows:
 
