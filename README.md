@@ -3,7 +3,7 @@
 
 ## Deployed latest version
 
-This repo hosts a deployed instance of TGVE on [GitHub Pages](https://tgve.github.io/eatlas-template). Instructions for deploying your own instance are below.
+This repo both hosts a deployed instance of TGVE on [GitHub Pages](https://tgve.github.io/eatlas-template), and acts as a template that you can use to deploy your own instance. Instructions for deploying your own instance are below.
 
 You can pass your own geospatial data URL as `defaultURL=url` parameter as follows:
 
