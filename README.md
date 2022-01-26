@@ -1,7 +1,7 @@
 [![Deploy to github pages](https://github.com/layik/eatlas-template/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/layik/eatlas-template/actions/workflows/gh-pages.yml) 
 [![npm version](https://badge.fury.io/js/eatlas.svg)](https://badge.fury.io/js/eatlas)
 
-This repo both hosts a deployed instance of TGVE on [GitHub Pages](https://tgve.github.io/app), and acts as a template that you can use to deploy your own instance.
+This repo both hosts a deployed instance of TGVE on GitHub Pages, and acts as a template that you can use to deploy your own instance.
 
 ## Deployed latest version
 
