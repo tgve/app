@@ -5,7 +5,7 @@ This repo both hosts a deployed instance of TGVE on [GitHub Pages](https://tgve.
 
 ## Deployed latest version
 
-You can pass your own geospatial data URL as `defaultURL=url` parameter as follows:
+The latest release is deployed at https://tgve.github.io/eatlas-template. You can pass your own geospatial data URL as `defaultURL=url` parameter as follows:
 
 ```sh
 https://tgve.github.io/eatlas-template?defaultURL=https://raw.githubusercontent.com/layik/eatlas-data/main/casualties_100.geojson
