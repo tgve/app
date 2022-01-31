@@ -2,7 +2,7 @@ name: Deploy to github pages
 
 on:
   push:
-    paths-ignore: 
+    paths-ignore:
       - '**/README.*md'
     branches:
       - main
@@ -29,18 +29,18 @@ jobs:
             cat package.json
         - name: Install dependencies
           run: yarn install  # CRA uses yarn by default
-    
+
         - name: Build
           run: yarn run build
           env:
             CI: false
-            REACT_APP_DEFAULT_URL: https://raw.githubusercontent.com/layik/eatlas-data/main/casualties.csv 
+            REACT_APP_DEFAULT_URL: https://raw.githubusercontent.com/tgve/eatlas-data/main/casualties.csv
             REACT_APP_MAPBOX_ACCESS_TOKEN: ${{secrets.MAPBOX_KEY}}
 
         - name: Run deploy script
           # git config is required
           run: |
-            git config user.name "github-actions[bot]" 
+            git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git checkout --orphan gh-pages
             git --work-tree build add --all
