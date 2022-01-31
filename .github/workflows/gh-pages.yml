@@ -26,7 +26,7 @@ jobs:
             sed -i "s/layik/${a[0]}/" package.json
             sed -i "s/app/${a[1]}/" package.json
             # debug
-            cat package.json
+            # cat package.json
         - name: Install dependencies
           run: yarn install  # CRA uses yarn by default
 
