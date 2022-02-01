@@ -44,10 +44,10 @@ name “eAtlas”. Your new instance will replace these two values with appropri
 In step (2) the template includes point data with geography defined in the columns. TGVE is able to parse the CSV file and pull out the points from the file using [`csv2geojson`](https://github.com/mapbox/csv2geojson) package by Mapbox. You can also define your own Mapbox API key as does this template repo in your github secrets section.
 
 ## Run locally (dev)
-This is a [Create React App](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app) and you can run it locally. You would need NodeJS and either yarn or npm [setup](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm). If you have those setup on your system then:
-1. Cloning this repository
-2. Running `yarn`
-3. and `yarn start`
+This is a [Create React App](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app) and you can run it locally. You would need NodeJS and either yarn or npm [installed](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm). Then:
+1. Clone this repository
+2. Run `yarn`
+3. Run `yarn start`
 
 Then visit `http://localhost:3000` to see the running application.
 
