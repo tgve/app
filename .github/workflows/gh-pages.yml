@@ -1,7 +1,10 @@
-name: Deploy to github pages
+name: gh-pages
 
 on:
   push:
+    paths-ignore:
+      - '**/README.*md'
+  pull_request:
     paths-ignore:
       - '**/README.*md'
 
@@ -18,8 +21,8 @@ jobs:
           uses: actions/checkout@v2
 
         - name: Set homepage - ${{ github.repository }}
+          # replace default values from the fork in `package.json`
           run: |
-            # replace default values from the fork in `package.json`
             IFS="/" read -a a <<< ${{ github.repository }}
             sed -i "s/layik/${a[0]}/" package.json
             sed -i "s/app/${a[1]}/" package.json
