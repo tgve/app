@@ -39,8 +39,7 @@
     "@testing-library/user-event": "^12.8.3",
     "http-server": "^14.0.0",
     "jest-canvas-mock": "^2.3.1",
-    "react-scripts": "3.4.4",
-    "tauri": "^0.14.1"
+    "react-scripts": "3.4.4"
   },
   "homepage": "https://tgve.github.io/app"
 }
