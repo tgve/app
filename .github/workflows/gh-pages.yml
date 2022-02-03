@@ -24,7 +24,7 @@ jobs:
           # replace default values from the fork in `package.json`
           run: |
             IFS="/" read -a a <<< ${{ github.repository }}
-            sed -i "s/layik/${a[0]}/" package.json
+            sed -i "s/tgve/${a[0]}/" package.json
             sed -i "s/app/${a[1]}/" package.json
             # debug
             # cat package.json
