@@ -1,11 +1,11 @@
 import React from 'react';
-import Eatlas from 'eatlas';
+import Tgve from '@tgve/tgvejs';
 
 import './App.css';
 
 function App() {
   return (
-    <Eatlas defaultURL={process.env.REACT_APP_DEFAULT_URL}/>
+    <Tgve defaultURL={process.env.REACT_APP_DEFAULT_URL}/>
   );
 }
 
