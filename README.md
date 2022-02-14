@@ -53,6 +53,10 @@ Tu run locally, ensure `yarn` is installed. Then:
 
 Then visit `http://localhost:3000` to see the running application.
 
+## Serving your own data
+
+See [here](notes/serving-data.md) for notes on serving your own data from R, Python or JavaScript.
+
 ## Technical notes
 
 * `react-scripts` locked to `3.4.4` due to a `url-loader` [issue](https://github.com/facebook/create-react-app/issues/9870).
