@@ -20,6 +20,9 @@ Likewise, you can embed it in an `iframe` as follows (this document is restricte
 ```html
 <iframe srce="https://tgve.github.io/app" />
 ```
+
+See the [example notebook](Python/jupyter-tgve.ipynb) for how to embed the application into a Jupyter notebook.
+
 ## Hosting your own instance
 
 This is a template repository which makes it easy to host your own instance of the Turing Geo-visualization Engine (TGVE) on your fork's GitHub Pages. To achieve this, follow these three steps:
