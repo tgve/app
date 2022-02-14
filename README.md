@@ -42,7 +42,7 @@ What did we do? The repo now has a branch called `gh-pages` which GitHub uses to
 
 <img width="100%" alt="guide-shot" src="https://user-images.githubusercontent.com/408568/108049506-44d59d00-7040-11eb-9f4e-0a083829bfa5.png">
 
-The example data file includes point data with geography defined in the columns. TGVE is able to extract the points from the CSV file using the [`csv2geojson`](https://github.com/mapbox/csv2geojson) package from Mapbox. You can set your own Mapbox API key by providing `MAPBOX_KEY` as a GitHub secret; see `REACT_APP_MAPBOX_ACCESS_TOKEN` in [`gh-pages.yml`](.github/workflows/gh-pages.yml)).
+The example data file includes point data with geography defined in the columns. TGVE is able to extract the points from the CSV file using the [`csv2geojson`](https://github.com/mapbox/csv2geojson) package from Mapbox. You can set your own Mapbox API key by providing `MAPBOX_KEY` as a GitHub secret; see `REACT_APP_MAPBOX_ACCESS_TOKEN` in [`gh-pages.yml`](.github/workflows/gh-pages.yml).
 
 ## Local hosting
 
