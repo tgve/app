@@ -7,10 +7,11 @@ on:
   pull_request:
     paths-ignore:
       - '**/README.*md'
+  workflow_dispatch:
 
 jobs:
     gh-pages-deploy:
-      name: Deploying to gh-pages
+      name: Build and deploy
       runs-on: ubuntu-latest
       steps:
         - name: Setup Node.js for use with actions
