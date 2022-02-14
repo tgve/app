@@ -1,6 +1,6 @@
-# Hosting your own data
+# Serving your own data
 
-## Flask
+## From Python (using Flask)
 The two `tgve*.py` scripts provided in this repository is the bare examples of running a Flask app with the React (TGVE) application as the root application.
 
 If you have your Python virtual environment setup with Flask installed + NodeJS with either npm or yarn setup, then:
@@ -11,8 +11,6 @@ If you have your Python virtual environment setup with Flask installed + NodeJS 
 
 Should be enough to get the application running/served by Python (Flask).
 Visit `http://localhost:5000` to see the app.
-
-## Other Flask instructions
 
 ### What is Flask?
 
@@ -114,7 +112,7 @@ REACT_APP_DEFAULT_URL=http://localhost:5000/las.geojson yarn run build`
 Now, the underlying TGVE instance would be looking at the above URL to fetch data.
 <img width=50% src="https://user-images.githubusercontent.com/408568/133994277-6f10f933-b990-4695-896e-2c2406277056.png" width="100%"/>
 
-## Plumber (geoplumber)
+## From R (using Geoplumber)
 The structure of this application is now a "geoplumber" app, so you can use the package to drive this project.
 
 If you just like to run the app in R, all you need is the simple `run.R` script and you should have the `R/plumber.R` API up and running serving the `build` folder of the front-end.
@@ -122,7 +120,7 @@ If you just like to run the app in R, all you need is the simple `run.R` script 
 Therefore, just clone the repo and run `Rscript run.R`.
 Visit `http://localhost:8000` to see the app.
 
-## NodeJS (ExpressJS)
+## From NodeJS (using ExpressJS)
 
 Similarly, to serve the application from a NodeJS process, we can use the example script in the `nodejs` folder. Remember, just like Flask and Plumber the static folder path is relative to the `process.cwd`. Therefore, to run the the application as it is:
 
