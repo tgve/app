@@ -30,7 +30,7 @@ You should now have an instance at `https://github.com/USER_OR_ORG/FORK_REPO_NAM
 
 2. Edit `REACT_APP_DEFAULT_URL` in [`gh-pages.yml`](https://github.com/tgve/app/blob/main/.github/workflows/gh-pages.yml) with URL of your dataset. To pass separate data and geography URLs, use `REACT_APP_GEOGRAPHY_URL`, `REACT_APP_GEOGRAPHY_COLUMN` and `REACT_APP_COLUMN` as described [here](https://github.com/tgve/tgvejs). Check out [`src/App.js`](src/App.js) to see how you can pass these variables to the TGVE React component.
 
-3. As you fork the repo and whether you follow step (2) or not, the defined actions in `.github/workflows` will be executed by GitHub. Once a first build is done, it will create a separate branch to your `main` branch called `gh-pages`. Go ahead and enable gh-pages by assigning branch `gh-pages` and `root` as the directory as shown below from your fork's settings:
+3. The actions defined in `.github/workflows` will be executed by GitHub. Once a first build is complete, it will create a separate branch called `gh-pages`. Enable deployment to GitHub Pages by assigning branch `gh-pages` and `root` as the directory in your fork's GitHub Pages settings:
 > <img width="100%" style="border:1px solid" alt="Setup github pages" src="https://user-images.githubusercontent.com/408568/109220743-39f1d980-77b1-11eb-9bd0-4b5e183854d5.png">
 
 You should now have an instance at `https://USER_OR_ORG.github.io/FORK_REPO_NAME`. Note that publishing to GitHub Pages may take some time.
