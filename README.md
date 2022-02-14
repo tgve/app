@@ -25,20 +25,20 @@ See the [example notebook](Python/jupyter-tgve.ipynb) for how to embed the appli
 
 ## Hosting your own instance
 
-This is a template repository which makes it easy to host your own instance of the Turing Geo-visualization Engine (TGVE) on your fork's GitHub Pages. To achieve this, follow these three steps:
+With this template repository, it is easy to host your own instance of the Turing Geo-visualization Engine (TGVE), via GitHub Pages. To achieve this, follow these three steps:
 
 1. Create repo from this template
 > <img width="100%" style="border:1px solid" alt="Use this template button in green" src="https://user-images.githubusercontent.com/408568/109291248-a8ba4b80-7820-11eb-9054-5b8fb6f38f82.png">
-You should now have an instance at `https://github.com/USER_OR_ORG/FORK_REPO_NAME`
+You should now have a copy (not fork) of the repo at `https://github.com/USER_OR_ORG/YOUR_REPO_NAME`
 
-2. Edit `REACT_APP_DEFAULT_URL` in [`gh-pages.yml`](https://github.com/tgve/app/blob/main/.github/workflows/gh-pages.yml) with URL of your dataset. To pass separate data and geography URLs, use `REACT_APP_GEOGRAPHY_URL`, `REACT_APP_GEOGRAPHY_COLUMN` and `REACT_APP_COLUMN` as described [here](https://github.com/tgve/tgvejs). Check out [`src/App.js`](src/App.js) to see how you can pass these variables to the TGVE React component.
+2. Edit `REACT_APP_DEFAULT_URL` in [`gh-pages.yml`](https://github.com/tgve/app/blob/main/.github/workflows/gh-pages.yml) with the URL of your dataset. To pass separate data and geography URLs, use `REACT_APP_GEOGRAPHY_URL`, `REACT_APP_GEOGRAPHY_COLUMN` and `REACT_APP_COLUMN`, as described [here](https://github.com/tgve/tgvejs). Check out [`src/App.js`](src/App.js) to see how you can pass these variables to the TGVE React component.
 
-3. The actions defined in `.github/workflows` will be executed by GitHub. Once a first build is complete, it will create a separate branch called `gh-pages`. Enable deployment to GitHub Pages by assigning branch `gh-pages` and `root` as the directory in your fork's GitHub Pages settings:
+3. The GitHub Actions defined in `.github/workflows` are responsible for building and deploying the app. Once the first build is complete, it will create a separate branch called `gh-pages`. Enable deployment to GitHub Pages by set `gh-pages` as the branch and `root` as the directory in your repo's GitHub Pages settings:
 > <img width="100%" style="border:1px solid" alt="Setup github pages" src="https://user-images.githubusercontent.com/408568/109220743-39f1d980-77b1-11eb-9bd0-4b5e183854d5.png">
 
-You should now have an instance at `https://USER_OR_ORG.github.io/FORK_REPO_NAME`. Note that publishing to GitHub Pages may take some time.
+You should now have an instance at `https://USER_OR_ORG.github.io/YOUR_REPO_NAME`. Note that publishing to GitHub Pages may take some time.
 
-What did we do? The repo now has a branch called `gh-pages` which GitHub uses to serve the app, which will pull data from the link added in step (2). The following screenshot shows a repo with owner “layik” and repository name “eAtlas”:
+What did we do? The repo now has a branch called `gh-pages` which GitHub uses to serve the app; the app will pull data from the link added in step (2). The following screenshot shows a repo with owner “layik” and repository name “eAtlas”:
 
 <img width="100%" alt="guide-shot" src="https://user-images.githubusercontent.com/408568/108049506-44d59d00-7040-11eb-9f4e-0a083829bfa5.png">
 
