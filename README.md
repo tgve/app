@@ -38,7 +38,7 @@ You should now have a copy (not fork) of the repo at `https://github.com/USER_OR
 
 You should now have an instance at `https://USER_OR_ORG.github.io/YOUR_REPO_NAME`. Note that publishing to GitHub Pages may take some time.
 
-What did we do? The repo now has a branch called `gh-pages` which GitHub uses to serve the app, which will pull data from the link added in step (2). The following screenshot shows a repo with owner “layik” and repository name “eAtlas”:
+What did we do? The repo now has a branch called `gh-pages` which GitHub uses to serve the app; the app will pull data from the link added in step (2). The following screenshot shows a repo with owner “layik” and repository name “eAtlas”:
 
 <img width="100%" alt="guide-shot" src="https://user-images.githubusercontent.com/408568/108049506-44d59d00-7040-11eb-9f4e-0a083829bfa5.png">
 
