@@ -24,9 +24,10 @@ jobs:
         - name: Set homepage - ${{ github.repository }}
           # replace default values from the fork in `package.json`
           run: |
+            set -x
+            npm install -g json
             IFS="/" read -a a <<< ${{ github.repository }}
-            sed -i "s/tgve/${a[0]}/" package.json
-            sed -i "s/app/${a[1]}/" package.json
+            json -I -f package.json -e "this.homepage=\"https://${a[0]}.github.io/${a[1]}\""
             # debug
             cat package.json
         - name: Install dependencies
