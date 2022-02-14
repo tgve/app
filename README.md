@@ -28,7 +28,7 @@ This is a template repository which makes it easy to host your own instance of t
 > <img width="100%" style="border:1px solid" alt="Use this template button in green" src="https://user-images.githubusercontent.com/408568/109291248-a8ba4b80-7820-11eb-9054-5b8fb6f38f82.png">
 You should now have an instance at `https://github.com/USER_OR_ORG/FORK_REPO_NAME`
 
-2. Edit `REACT_APP_DEFAULT_URL` in `gh-pages.yml`(https://github.com/tgve/app/blob/main/.github/workflows/gh-pages.yml) with URL of your dataset. To pass separate data and geography URLs, use `REACT_APP_GEOGRAPHY_URL`, `REACT_APP_GEOGRAPHY_COLUMN` and `REACT_APP_COLUMN` as described [here](https://github.com/tgve/tgvejs). Check out [`src/App.js`](src/App.js) to see how you can pass these variables to the TGVE React component.
+2. Edit `REACT_APP_DEFAULT_URL` in [`gh-pages.yml`](https://github.com/tgve/app/blob/main/.github/workflows/gh-pages.yml) with URL of your dataset. To pass separate data and geography URLs, use `REACT_APP_GEOGRAPHY_URL`, `REACT_APP_GEOGRAPHY_COLUMN` and `REACT_APP_COLUMN` as described [here](https://github.com/tgve/tgvejs). Check out [`src/App.js`](src/App.js) to see how you can pass these variables to the TGVE React component.
 
 3. As you fork the repo and whether you follow step (2) or not, the defined actions in `.github/workflows` will be executed by GitHub. Once a first build is done, it will create a separate branch to your `main` branch called `gh-pages`. Go ahead and enable gh-pages by assigning branch `gh-pages` and `root` as the directory as shown below from your fork's settings:
 > <img width="100%" style="border:1px solid" alt="Setup github pages" src="https://user-images.githubusercontent.com/408568/109220743-39f1d980-77b1-11eb-9bd0-4b5e183854d5.png">
