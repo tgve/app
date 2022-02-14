@@ -35,9 +35,7 @@ You should now have an instance at `https://github.com/USER_OR_ORG/FORK_REPO_NAM
 
 You should now have an instance at `https://USER_OR_ORG.github.io/FORK_REPO_NAME`. Note that publishing to GitHub Pages may take some time.
 
-What did we do? The repo you set up has a branch called `gh-pages` which GitHub uses to serve. The GitHub Actions workflows generate a
-production-ready app which pulls data from the link added in step (2). The following screenshot shows a repo with owner “layik” and repository
-name “eAtlas”. Your new instance will replace these two values with appropriate information obtained from via GitHub API.
+What did we do? The repo now has a branch called `gh-pages` which GitHub uses to serve the app, which will pull data from the link added in step (2). The following screenshot shows a repo with owner “layik” and repository name “eAtlas”:
 
 <img width="100%" alt="guide-shot" src="https://user-images.githubusercontent.com/408568/108049506-44d59d00-7040-11eb-9f4e-0a083829bfa5.png">
 
