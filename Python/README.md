@@ -1,6 +1,6 @@
-## Serving your own data via Python (using Flask)
+## Serving the app via Python (using Flask)
 
-The two `tgve*.py` scripts provided in this repository is the bare examples of running a Flask app with the React (TGVE) application as the root application.
+The two `tgve*.py` scripts provided in this folder show how to a Flask app with the React (TGVE) application as the root application.
 
 If you have your Python virtual environment setup with Flask installed + NodeJS with either npm or yarn setup, then:
 
@@ -14,10 +14,6 @@ Visit `http://localhost:5000` to see the app.
 ### What is Flask?
 
 Flask is a Python based web application "micro" framework and R's `plumber` is inspired by it. From the v2 [docs](https://flask.palletsprojects.com/en/2.0.x/foreword/):
-
-> “Micro” does not mean that your whole web application has to fit into a single Python file (although it certainly can), nor does it mean that Flask is lacking in functionality.
-
-So TGVE must also be able to run within a flask app.
 
 ### Using the template repository (Create React App)
 
