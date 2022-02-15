@@ -1,7 +1,5 @@
 ## Serving the app via R (using Plumber)
 
-The structure of this application is a Plumber app, so you can use the package to drive this project.
+Plumber is an R web application framework.The script [serve.sh](./serve.sh) and related files document how to serve TGVE as a Plumber app.
 
-If you just like to run the app in R, all you need is the simple `run.R` script and you should have the `R/plumber.R` API up and running serving the `build` folder of the front-end.
-
-Therefore, just clone the repo and run `Rscript run.R`.
+To run the app in R, run `run.R` and you should have the `R/plumber.R` API up and running serving the `build` folder of the front end.
