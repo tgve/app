@@ -9,6 +9,9 @@ on:
     paths-ignore:
       - '**/README.*md'
       - 'notes/**'
+      - 'Python/**'
+      - 'R/**'
+      - 'Dockerfile*'
   workflow_dispatch:
 
 jobs:
