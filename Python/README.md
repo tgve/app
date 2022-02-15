@@ -8,14 +8,6 @@ The [Dockerfile](../Dockerfile.Python) shows how to set up and run the app via F
 
 What we are going to do is simply get the `build` output of the [`app`](https://github.com/tgve/app) repository to be served by Flask. In the next section we will see how we can pass variables to TGVE from Python and also briefly outline how we need to rebuild front-end. Please refer to the TGVE docs or Create React App for more.
 
-So, what is our static directory? That would be the output of a standard build command of a Create React App's react-scripts library. Again, please consult the [README](https://github.com/tgve/app) on this but in short, if you have node and npm package manager [setup](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm), then:
-
-1. Clone the template repository
-2. Run yarn and
-3. Run yarn run build
-
-Then under your clones path you would have a build directory. That is our static directory. Just add that path to the above Python code.
-
 We just need to run `python tgve.py` assuming you saved the script in `tgve.py` file and you have your environment setup for Python. You should see something like this (notice the famous Flask port 5000):
 <img src="https://user-images.githubusercontent.com/408568/133886684-e9266d1b-79ab-43e5-8606-84dc8b26da2a.png" width="100%" />
 

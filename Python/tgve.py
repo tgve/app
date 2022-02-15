@@ -3,6 +3,7 @@
 import os
 from flask import Flask, send_from_directory
 
+# static directory is output directory of yarn build
 app = Flask(__name__, static_folder='../build')
 
 # serve contents of `static_folder` path
