@@ -6,7 +6,7 @@ The [Dockerfile](../Dockerfile.Python) shows how to set up and run the app via F
 
 You should be able to browse to something like this (notice the famous Flask port 5000):
 
-<img scale="30%" src="https://user-images.githubusercontent.com/408568/133886684-e9266d1b-79ab-43e5-8606-84dc8b26da2a.png" width="100%" />
+<img src="https://user-images.githubusercontent.com/408568/133886684-e9266d1b-79ab-43e5-8606-84dc8b26da2a.png" width="60%" />
 
 ### Using the template repository (Create React App)
 
