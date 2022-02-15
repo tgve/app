@@ -46,16 +46,19 @@ The example data file includes point data with geography defined in the columns.
 
 ## Local hosting
 
-Tu run locally, ensure `yarn` is installed. Then:
+To run locally, ensure `yarn` is installed. Then:
 1. Clone this repository
 2. Run `yarn`
 3. Run `yarn start`
 
 Then visit `http://localhost:3000` to see the running application.
 
-## Serving your own data
+## Serving the app from R or Python
 
-See [here](notes/serving-data.md) for notes on serving your own data from R, Python or JavaScript.
+See the following `README`s for documentation.
+
+- [Python (using Flask)](../Python/)
+- [R (using Plumber)](../R/)
 
 ## Technical notes
 
