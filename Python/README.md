@@ -1,8 +1,8 @@
 ## Serving the app via Python (using Flask)
 
-Flask is a Python web application framework. The script [serve.sh](./serve.sh) and related Docker file document how to serve TGVE as a Flask app.
+Flask is a Python web application framework. The script [serve.sh](./serve.sh) and related [Dockerfile](../Dockerfile.Python) document how to serve TGVE as a Flask app.
 
-**TODO** Incorporate the following information into the existing scripts:
+**TODO** Merge following information into existing scripts:
 
 1. build the front-end:
 `git clone https://github.com/tgve/app && cde app && yarn && yarn run tgver` notice here we run a little script to edit the React `homepage` in `package.json` when we build the app.
