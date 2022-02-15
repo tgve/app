@@ -1,6 +1,6 @@
 ## Serving the app via Python (using Flask)
 
-Flask is a Python based web application framework. The two `tgve*.py` scripts provided in this folder show how to a Flask app with the React (TGVE) application as the root application.
+Flask is a Python based web application framework. The `tgve.py` scripts provided in this folder show how to a Flask app with the React (TGVE) application as the root application.
 
 In order to run this repository as a Flask app you need to:
 
@@ -15,4 +15,4 @@ You should be able to browse to something like this (notice the famous Flask por
 
 The [Dockerfile](../Dockerfile.Python) shows how to set up and run the app via Flask. The script [serve.sh](./serve.sh) starts the app in a Docker container.
 
-See the [TGVE docs](../../tgvejs/) for how to pass data endpoints to TGVE. See [here](./cross-origin.md) for [cross-origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) instructions.
+See the [TGVE docs](../../tgvejs/) for how to pass data endpoints to TGVE.
