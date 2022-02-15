@@ -15,14 +15,14 @@ RUN R -e 'install.packages(c("plumber"), repos="http://cran.us.r-project.org")'
 
 # add node/npm
 RUN apt-get -y install curl gnupg
-RUN apt-get -y install nodejs npm
+RUN apt-get -y install nodejs yarn
 
 ADD . /app
 
 # build
 WORKDIR /app
-RUN npm install
-RUN npm run tgver
+RUN yarn 
+RUN yarn run tgver
 RUN rm -rf node_modules
 
 EXPOSE 8000
