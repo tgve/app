@@ -3,8 +3,11 @@
 set -xe
 
 pushd ..
+# REACT_APP_MAPBOX_ACCESS_TOKEN required but app should run
 docker build -f Dockerfile.R -t tgve-plumber .
-docker run -p 127.0.0.1:5000:5000 tgve-plumber
+docker run -d -p 8000:8000 --name tgve-plumber tgve-plumber
+
 popd
 
-# visit `http://localhost:5000` to see the app
+# use your favourite document server (nginx for example) to proxy requests.
+# visit `http://localhost:8000` to see the app.

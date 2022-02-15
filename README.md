@@ -46,7 +46,7 @@ The example data file includes point data with geography defined in the columns.
 
 ## Local hosting
 
-Tu run locally, ensure `yarn` is installed. Then:
+To run locally, ensure `yarn` is installed. Then:
 1. Clone this repository
 2. Run `yarn`
 3. Run `yarn start`
