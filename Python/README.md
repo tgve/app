@@ -10,12 +10,9 @@ You should be able to browse to something like this (notice the famous Flask por
 
 ### Using the template repository (Create React App)
 
-What we are going to do is simply get the `build` output of the [`app`](https://github.com/tgve/app) repository to be served by Flask. In the next section we will see how we can pass variables to TGVE from Python and also briefly outline how we need to rebuild front-end. Please refer to the TGVE docs or Create React App for more.
+See the [TGVE docs](../../tgvejs/) for how to pass data endpoints to TGVE.
 
-We just need to run `python tgve.py` assuming you saved the script in `tgve.py` file and you have your environment setup for Python.
-
-### Serving data to TGVE
-Just like any other web application, we can setup our data end-points and let TGVE know about it and deploy the application in a Python environment. Let's say we like to serve a simple GeoJSON file of United Kingdom's Upper Tier Local Authority geographies in a file named `las.geojson`, so long as we can serve this as JSON, TGVE should be able to parse it ([CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) permitting).
+In the next section we will see how we need to rebuild front-end. Please refer to the TGVE docs or Create React App for more.
 
 #### Rebuild TGVE
 If we rebuild our app with our Flask as the "origin" then we should not hit CORS as by default Flask has CORS turned on, and it seems enabling CORS requires some work.
