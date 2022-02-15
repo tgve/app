@@ -1,12 +1,17 @@
+# adapted from https://stackoverflow.com/a/45634550
+
 import os
 from flask import Flask, send_from_directory
 
-app = Flask(__name__, static_folder='build')
+# static directory is output directory of yarn build
+app = Flask(__name__, static_folder='../build')
 
-# Serve React App
+# serve contents of `static_folder` path
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def serve(path):
+    # check provided path against static folder -- if it exists (such as .js file in our case), serve it;
+    # otherwise fall back to static folder's `index.html` file
     if path != "" and os.path.exists(app.static_folder + '/' + path):
         return send_from_directory(app.static_folder, path)
     else:

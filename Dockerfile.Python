@@ -1,0 +1,12 @@
+FROM nikolaik/python-nodejs
+
+ADD . /app
+WORKDIR /app
+
+RUN virtualenv /ve
+RUN /ve/bin/pip install flask==2.0.3
+RUN yarn && yarn run build
+
+ENV FLASK_APP="/app/Python/tgve.py"
+# See https://pythonspeed.com/articles/docker-connection-refused/ for why --host 0.0.0.0
+CMD ["/ve/bin/python", "-m", "flask", "run", "--host", "0.0.0.0"]
