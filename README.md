@@ -53,13 +53,13 @@ To run locally, ensure `yarn` is installed. Then:
 
 Then visit `http://localhost:3000` to see the running application.
 
-## Serving your own data
+## Serving the app from R, Python or NodeJS
 
 See the following `README`s for documentation.
 
 - [Python (using Flask)](../Python/)
 - [R (using Plumber)](../R/)
-- [NodeJS](../NodeJS/)
+- [NodeJS (using ExpressJS)](../NodeJS/)
 
 ## Technical notes
 
