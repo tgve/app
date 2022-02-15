@@ -6,10 +6,9 @@ FROM nikolaik/python-nodejs
 ADD . /app
 WORKDIR /app
 
-RUN virtualenv /tgve
-RUN /tgve/bin/pip install flask==1.0.1
+RUN virtualenv /ve
+RUN /ve/bin/pip install flask==1.0.1
 RUN yarn && yarn run build
 
 EXPOSE 5000
-CMD ["/app/Python/tgve.py"]
-ENTRYPOINT ["python"]
+CMD ["/ve/bin/python", "/app/Python/tgve.py"]
