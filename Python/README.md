@@ -8,4 +8,4 @@ You should be able to browse to something like this (notice the famous Flask por
 
 <img src="https://user-images.githubusercontent.com/408568/133886684-e9266d1b-79ab-43e5-8606-84dc8b26da2a.png" width="60%" />
 
-See the [TGVE docs](../../tgvejs/) for how to pass data endpoints to TGVE. See [here](./cross-origin.md) for [cross-origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) instructions.
+See the [TGVE docs](../../tgvejs/) for how to pass data endpoints to TGVE.
