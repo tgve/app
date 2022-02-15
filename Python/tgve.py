@@ -1,3 +1,5 @@
+# adapted from https://stackoverflow.com/a/45634550
+
 import os
 from flask import Flask, send_from_directory
 
