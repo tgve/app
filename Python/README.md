@@ -6,9 +6,7 @@ The [Dockerfile](../Dockerfile.Python) shows how to set up and run the app via F
 
 ### Using the template repository (Create React App)
 
-What we are going to do is simply get the `build` output of the [`app`](https://github.com/tgve/app) repository to be served by Flask. In the next section we will see how we can pass variables to TGVE from Python and also briefly outline how we need to rebuild front-end. Please refer to the TGVE docs or Create React App for more. You also need to be familiar with working with Flask but we take that as given as you are reading this entry.
-
-Quick explanation of the Python script is that first route ("/") serves what is inside the `static_folder` path. The second route (`/<path:path>`) checks the provided path against the static folder, if it exists it would serve it (such as a js file in our case) if not it would fallback to static folder's `index.html` file.
+What we are going to do is simply get the `build` output of the [`app`](https://github.com/tgve/app) repository to be served by Flask. In the next section we will see how we can pass variables to TGVE from Python and also briefly outline how we need to rebuild front-end. Please refer to the TGVE docs or Create React App for more.
 
 So, what is our static directory? That would be the output of a standard build command of a Create React App's react-scripts library. Again, please consult the [README](https://github.com/tgve/app) on this but in short, if you have node and npm package manager [setup](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm), then:
 
