@@ -1,13 +1,3 @@
-# Serving your own data
-
-## From Python (using Flask)
-
-See the [Python folder](../Python/) for documentation.
-
-## From R (using Geoplumber)
-
-See the [R folder](../E/) for documentation.
-
 ## From NodeJS (using ExpressJS)
 
 Similarly, to serve the application from a NodeJS process, we can use the example script in the `nodejs` folder. Remember, just like Flask and Plumber the static folder path is relative to the `process.cwd`. Therefore, to run the the application as it is:

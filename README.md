@@ -55,7 +55,11 @@ Then visit `http://localhost:3000` to see the running application.
 
 ## Serving your own data
 
-See [here](notes/serving-data.md) for notes on serving your own data from R, Python or JavaScript.
+See the following `README`s for documentation.
+
+- [Python (using Flask)](../Python/)
+- [R (using Plumber)](../R/)
+- [NodeJS](../NodeJS/)
 
 ## Technical notes
 
