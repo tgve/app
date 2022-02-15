@@ -1,9 +1,13 @@
-# Run with docker build -f Dockerfile.Python .
+# From root of rep, run:
+#   docker build -f Dockerfile.Python -t tgve-flask .
+#   docker run tgve-flask
 FROM nikolaik/python-nodejs
 
 ADD . /app
 WORKDIR /app
 
+RUN virtualenv /tgve
+RUN /tgve/bin/pip install flask==1.0.1
 RUN yarn && yarn run build
 
 EXPOSE 5000
