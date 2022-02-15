@@ -7,5 +7,5 @@ RUN virtualenv /ve
 RUN /ve/bin/pip install flask==2.0.3
 RUN yarn && yarn run build
 
-EXPOSE 5000
-CMD ["/ve/bin/python", "/app/Python/tgve.py"]
+ENV FLASK_APP="/app/Python/tgve.py"
+CMD ["/ve/bin/python", "-m", "flask", "run", "--host", "0.0.0.0"]
