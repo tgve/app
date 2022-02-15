@@ -1,0 +1,11 @@
+# Run with docker build -f Dockerfile.Python .
+FROM nikolaik/python-nodejs
+
+ADD . /app
+WORKDIR /app
+
+RUN yarn && yarn run build
+
+EXPOSE 5000
+CMD ["/app/Python/tgve.py"]
+ENTRYPOINT ["python"]
