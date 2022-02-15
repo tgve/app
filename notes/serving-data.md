@@ -2,7 +2,7 @@
 
 ## From Python (using Flask)
 
-See the [Python folder](Python/) for documentation.
+See the [Python folder](../Python/) for documentation.
 
 ## From R (using Geoplumber)
 The structure of this application is now a "geoplumber" app, so you can use the package to drive this project.
