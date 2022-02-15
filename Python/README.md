@@ -2,14 +2,7 @@
 
 The two `tgve*.py` scripts provided in this folder show how to a Flask app with the React (TGVE) application as the root application.
 
-If you have your Python virtual environment setup with Flask installed + NodeJS with either npm or yarn setup, then:
-
-1. Clone the repository
-2. Run `yarn && yarn run build`
-3. Run `python tgve.py`
-
-Should be enough to get the application running/served by Python (Flask).
-Visit `http://localhost:5000` to see the app.
+The [Dockerfile](../Dockerfile.Python) shows how to set up and run the app via Flask. The script [serve.sh](./serve.sh) starts the app in a Docker container.
 
 ### What is Flask?
 
