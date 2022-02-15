@@ -10,9 +10,7 @@ You should be able to browse to something like this (notice the famous Flask por
 
 ### Using the template repository (Create React App)
 
-See the [TGVE docs](../../tgvejs/) for how to pass data endpoints to TGVE.
-
-In the next section we will see how we need to rebuild front-end. Please refer to the TGVE docs or Create React App for more.
+See the [TGVE docs](../../tgvejs/) for how to pass data endpoints to TGVE. See [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) for cross-origin restrictions.
 
 #### Rebuild TGVE
 If we rebuild our app with our Flask as the "origin" then we should not hit CORS as by default Flask has CORS turned on, and it seems enabling CORS requires some work.
