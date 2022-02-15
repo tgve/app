@@ -5,6 +5,9 @@ on:
     paths-ignore:
       - '**/README.*md'
       - 'notes/**'
+      - 'Python/**'
+      - 'R/**'
+      - 'Dockerfile*'
   pull_request:
     paths-ignore:
       - '**/README.*md'
