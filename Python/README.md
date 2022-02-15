@@ -1,6 +1,4 @@
-## From Python (using Flask)
-
-See the [Python folder](Python/).
+## Serving your own data via Python (using Flask)
 
 The two `tgve*.py` scripts provided in this repository is the bare examples of running a Flask app with the React (TGVE) application as the root application.
 
