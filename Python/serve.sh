@@ -1,5 +1,5 @@
 #!/bin/bash
-# run from directory containing this script
+# (run from containing directory)
 set -xe
 
 pushd ..
