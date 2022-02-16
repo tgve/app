@@ -15,7 +15,8 @@ RUN R -e 'install.packages(c("plumber"), repos="http://cran.us.r-project.org")'
 
 # add node/npm
 RUN apt-get -y install curl gnupg
-RUN apt-get -y install nodejs npm
+RUN curl -sL https://deb.nodesource.com/setup_16.x  | bash -
+RUN apt-get -y install nodejs
 RUN npm install --global yarn
 
 ADD . /app
@@ -23,7 +24,7 @@ ADD . /app
 # build
 WORKDIR /app
 RUN yarn 
-RUN yarn run tgver
+RUN yarn run build-local
 RUN rm -rf node_modules
 
 EXPOSE 8000
