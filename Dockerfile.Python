@@ -5,7 +5,7 @@ WORKDIR /app
 
 RUN virtualenv /ve
 RUN /ve/bin/pip install flask==2.0.3
-RUN yarn && yarn run build
+RUN yarn && yarn run build-local
 
 ENV FLASK_APP="/app/Python/tgve.py"
 # See https://pythonspeed.com/articles/docker-connection-refused/ for why --host 0.0.0.0

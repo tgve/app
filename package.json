@@ -12,7 +12,7 @@
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "start": "react-scripts start",
     "build": "react-scripts --max_old_space_size=8192 build",
-    "tgver": "json -I -f package.json -e 'this.homepage=\".\"' && GENERATE_SOURCEMAP=false yarn build",
+    "build-local": "json -I -f package.json -e 'this.homepage=\".\"' && GENERATE_SOURCEMAP=false yarn build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
