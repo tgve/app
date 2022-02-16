@@ -15,7 +15,8 @@ RUN R -e 'install.packages(c("plumber"), repos="http://cran.us.r-project.org")'
 
 # add node/npm
 RUN apt-get -y install curl gnupg
-RUN apt-get -y install nodejs yarn
+RUN apt-get -y install nodejs npm
+RUN npm install --global yarn
 
 ADD . /app
 
