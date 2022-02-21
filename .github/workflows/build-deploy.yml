@@ -1,7 +1,6 @@
 name: build-deploy
 
 on:
-  create:
   push:
     paths-ignore:
       - '**/README.*md'
