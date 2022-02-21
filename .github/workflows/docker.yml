@@ -12,8 +12,6 @@ jobs:
     # don't push to registry, just validate build
     runs-on: ubuntu-latest
     steps:
-      - name: Check out the repo
-        uses: actions/checkout@v2
       - name: Build Python
         uses: docker/build-push-action@v2
         with:
