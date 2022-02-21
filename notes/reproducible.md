@@ -6,12 +6,20 @@ therefore there is a particular directory structure to it. That is R at
 the backend based on `plumber` APIs and fronted being a CRA app.
 
 This document shows how TGVE is a fully reproducible using R code. This
-markdown document itself is prodcued using Rmarkdown companion document.
+markdown document itself is produced using Rmarkdown companion document.
 
 ``` r
-# we need goeplumber
+# we need geoplumber
 # & curl
 library(geoplumber)
+install.packages("RCurl")
+```
+
+    ## Updating HTML index of packages in '.Library'
+
+    ## Making 'packages.html' ... done
+
+``` r
 library(RCurl)
 message("geoplumber v: ", packageVersion("geoplumber"))
 ```
@@ -24,12 +32,10 @@ d <- file.path(tempdir(), "gp")
 gp_create(d)
 ```
 
-    ## Creating directory: /var/folders/z7/l4z5fwqs2ksfv22ghh2n9smh0000gp/T//Rtmp6PNiBf/gp
-
-    ## To build/run app, set working directory to: /var/folders/z7/l4z5fwqs2ksfv22ghh2n9smh0000gp/T//Rtmp6PNiBf/gp
-
+    ## Creating directory: /var/folders/rq/2nltczms227cjpyhspkbnslc0000gr/T//RtmppL3whb/gp
+    ## To build/run app, set working directory to: /var/folders/rq/2nltczms227cjpyhspkbnslc0000gr/T//RtmppL3whb/gp
     ## Standard output from create-react-app works.
-    ## You can run gp_ functions from directory: /var/folders/z7/l4z5fwqs2ksfv22ghh2n9smh0000gp/T//Rtmp6PNiBf/gp
+    ## You can run gp_ functions from directory: /var/folders/rq/2nltczms227cjpyhspkbnslc0000gr/T//RtmppL3whb/gp
     ## To build the front end run: gp_build()
     ## To run the geoplumber app: gp_plumb()
     ## Happy coding.
@@ -49,12 +55,14 @@ ps <- gp_explore(sf = sf::st_read("london.geojson"), build = F)
     ## Looks like geoplumber was not built, serveing API only.
     ## To serve the front end run gp_build() first.
 
-    ## Reading layer `london_junction_point_cas' from data source `/private/var/folders/z7/l4z5fwqs2ksfv22ghh2n9smh0000gp/T/Rtmp6PNiBf/gp/london.geojson' using driver `GeoJSON'
+    ## Reading layer `london_junction_point_cas' from data source 
+    ##   `/private/var/folders/rq/2nltczms227cjpyhspkbnslc0000gr/T/RtmppL3whb/gp/london.geojson' 
+    ##   using driver `GeoJSON'
     ## Simple feature collection with 34071 features and 2 fields
-    ## geometry type:  POINT
-    ## dimension:      XY
-    ## bbox:           xmin: -0.5102564 ymin: 51.29286 xmax: 0.2865577 ymax: 51.68608
-    ## geographic CRS: WGS 84
+    ## Geometry type: POINT
+    ## Dimension:     XY
+    ## Bounding box:  xmin: -0.5102564 ymin: 51.29286 xmax: 0.2865577 ymax: 51.68608
+    ## Geodetic CRS:  WGS 84
 
     ## Serving data at http://localhost:8000/api/explore
 
@@ -64,7 +72,7 @@ Sys.sleep(2)
 ps
 ```
 
-    ## PROCESS 'R', running, pid 31012.
+    ## PROCESS 'R', running, pid 11231.
 
 ``` r
 # is the API endpoint serving?
@@ -85,9 +93,8 @@ webpage <- readLines(tc <- textConnection(webpage)); close(tc)
 tail(webpage)
 ```
 
-    ## [1] "    <p>build missing</p>" "  </div>"
-    ## [3] "</div>"                   ""
-    ## [5] "</body>"                  "</html>"
+    ## [1] "    <p>build missing</p>" "  </div>"                 "</div>"                  
+    ## [4] ""                         "</body>"                  "</html>"
 
 ``` r
 # we know first line of the tail is the warning message from geoplumber
@@ -113,7 +120,7 @@ As we can see from the output of the R chunk, we do the following:
 
 ## Front-end
 
-We can follow standard CRA app commands, though `tgve` repository may
+We can follow standard CRA app commands, though the TGVE repository may
 have slightly different `scripts` defined. The `geoplumber` commands
 (functions) related to the front-end also should work as shown below:
 
@@ -126,6 +133,8 @@ gp_build()
 ```
 
     ## Running: npm run build
+
+    ## Warning in system("npm run build", ignore.stderr = TRUE): error in running command
 
     ## Looks like first run, installing npm packages...
 
