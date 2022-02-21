@@ -1,5 +1,5 @@
 
-name: docker-images
+name: docker
 
 on:
   push:
