@@ -1,16 +1,5 @@
 #' plumber 1.1.0
 
-# CORSE can be enabled in plumber like following
-#' for disabling it for any endpoint we want in future
-#' https://www.rplumber.io/docs/security.html#cross-origin-resource-sharing-cors
-## @filter cors
-# cors <- function(res) {
-#   res$setHeader("Access-Control-Allow-Origin", "*")
-#   plumber::forward()
-# }
-# TODO: option to remove above CORS
-
-#'
 #' @param msg The message to echo
 #' @get /api/helloworld
 #' @get /api/helloworld/

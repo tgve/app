@@ -3,15 +3,12 @@ FROM rstudio/r-base:4.0-focal
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     # required for plumber
-    libsodium-dev \ 
+    libsodium-dev \
     libssl-dev \
     libudunits2-dev \
     netcdf-bin
 
-# RUN apt-get install -y r-cran-devtools r-cran-sf r-cran-plumber
-
 RUN R -e 'install.packages(c("plumber"), repos="http://cran.us.r-project.org")'
-# RUN R -e 'devtools::install_github("ATFutures/geoplumber")'
 
 # add node/npm
 RUN apt-get -y install curl gnupg
@@ -23,7 +20,7 @@ ADD . /app
 
 # build
 WORKDIR /app
-RUN yarn 
+RUN yarn
 RUN yarn run build-local
 RUN rm -rf node_modules
 
