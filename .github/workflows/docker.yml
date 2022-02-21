@@ -7,27 +7,18 @@ on:
       - docker # TODO: change to release
 
 jobs:
-  push_to_registry:
-    name: Push Docker images to GH Packages
+  build:
+    name: Validate Docker builds
+    # don't push to registry, just validate build
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
-      - name: Build and push tgve-python
+      - name: Build Python
         uses: docker/build-push-action@v2
         with:
           file: Dockerfile.Python
-          # username: ${{ github.actor }}
-          # password: ${{ secrets.GITHUB_TOKEN }}
-          # registry: docker.pkg.github.com
-          # repository: tgve/app/tgve-python
-          # tag_with_ref: true
-      - name: Build and push tgve-r
+      - name: Build R
         uses: docker/build-push-action@v2
         with:
           file: Dockerfile.R
-          # username: ${{ github.actor }}
-          # password: ${{ secrets.GITHUB_TOKEN }}
-          # registry: docker.pkg.github.com
-          # repository: tgve/app/tgve-python
-          # tag_with_ref: true
