@@ -1,4 +1,4 @@
-name: gh-pages
+name: build-deploy
 
 on:
   push:
@@ -18,7 +18,7 @@ on:
   workflow_dispatch:
 
 jobs:
-    gh-pages-deploy:
+    build-deploy:
       name: Build and deploy
       runs-on: ubuntu-latest
       steps:
