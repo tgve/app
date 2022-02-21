@@ -49,7 +49,7 @@ jobs:
             REACT_APP_MAPBOX_ACCESS_TOKEN: ${{secrets.MAPBOX_KEY}}
 
         - name: Deploy
-          if: github.ref == 'refs/heads/release'
+#          if: github.ref == 'refs/heads/release'
           # run: |
           #   git config user.name "github-actions[bot]"
           #   git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
