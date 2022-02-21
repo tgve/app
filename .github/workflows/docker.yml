@@ -4,7 +4,7 @@ name: docker-images
 on:
   push:
     branches:
-      - actions-docker # TODO: change to release
+      - docker # TODO: change to release
 
 jobs:
   push_to_registry:
