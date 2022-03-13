@@ -8,7 +8,7 @@ This repo both hosts a deployed instance of [TGVE](https://github.com/tgve/tgvej
 The latest release is deployed at https://tgve.github.io/app. You can pass your own geospatial data URL as `defaultURL=url` parameter as follows:
 
 ```sh
-https://tgve.github.io/app?defaultURL=https://raw.githubusercontent.com/tgve/app/main/casualties_100.geojson
+https://tgve.github.io/app?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson
 ```
 
 You should see something like:

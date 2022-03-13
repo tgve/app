@@ -10,7 +10,8 @@
   },
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
-    "start": "react-scripts start",
+    "purge-tgvejs-react": "rm -rf node_modules/@tgve/tgvejs/node_modules/react/ && rm -rf node_modules/@tgve/tgvejs/node_modules/react-dom/",
+    "start": "yarn purge-tgvejs-react && react-scripts start",
     "build": "react-scripts --max_old_space_size=8192 build",
     "build-local": "json -I -f package.json -e 'this.homepage=\".\"' && GENERATE_SOURCEMAP=false yarn build",
     "test": "react-scripts test",
