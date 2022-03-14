@@ -48,6 +48,12 @@ jobs:
             REACT_APP_DEFAULT_URL: https://raw.githubusercontent.com/tgve/example-data/main/casualties.csv
             REACT_APP_MAPBOX_ACCESS_TOKEN: ${{secrets.MAPBOX_KEY}}
 
+        - name: Test
+          run: |
+            yarn build-local
+            yarn start &
+            yarn test:e2e
+
         - name: Deploy
           if: github.ref == 'refs/heads/release'
           uses: peaceiris/actions-gh-pages@v3
