@@ -1,6 +1,6 @@
-import puppeteer from "puppeteer";
-const url = require('url');
-const fs = require("fs")
+import puppeteer from "puppeteer"
+import url from 'url'
+import fs from 'fs'
 
 let browser;
 let page;
