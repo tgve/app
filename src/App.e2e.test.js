@@ -52,6 +52,7 @@ describe("App.js", () => {
 
     it("check screenshot", async () => {
         await page.goto(url.pathToFileURL("build/index.html"));
+        await page.setViewport({ width: 1280, height: 1400 });
         await page.$eval('.mapboxgl-map',e => e.setAttribute("style", "visibility: hidden"));
         await page.$eval('.loader',e => e.setAttribute("style", "visibility: hidden"));
         await page.waitForSelector(".side-pane-header");  
