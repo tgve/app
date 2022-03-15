@@ -5,7 +5,7 @@ import { toMatchImageSnapshot } from 'jest-image-snapshot'
 
 export function setConfig(filename) {
     return {
-        failureThreshold: '0',
+        failureThreshold: '0.5',
         failureThresholdType: 'percent',
         customSnapshotsDir: `${__dirname}/__snapshots__/`,
         customSnapshotIdentifier: filename,
