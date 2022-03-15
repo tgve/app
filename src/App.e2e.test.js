@@ -60,6 +60,8 @@ describe("App.js", () => {
         await page.goto(url.pathToFileURL("build/index.html"), {
             waitUntil: "networkidle0",
             });
+        await page.$eval('.mapboxgl-map',e => e.setAttribute("style", "visibility: hidden"));
+        await page.$eval('.loader',e => e.setAttribute("style", "visibility: hidden"));
         await page.waitForSelector(".side-pane-header");  
         const image = await page.screenshot({ fullPage: true }); 
         expect(image).toMatchImageSnapshot(setConfig('image-name'));
@@ -73,9 +75,6 @@ describe("App.js", () => {
 
 afterAll(async () => browser.close());
 
-/*
-const image = await page.screenshot({ fullPage: true });
-expect(image).toMatchImageSnapshot(setConfig('image-name'));
-}, 15000);
-
-*/
+// mapboxgl-map
+//=> e.setAttribute("visibility", "hidden
+//await page.$eval(' div.panel-footer > div > div > ul > li:nth-child(3) > a ',e => e.setAttribute("data-page","100"));
