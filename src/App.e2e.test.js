@@ -3,6 +3,16 @@ import url from 'url'
 import fs from 'fs'
 import { toMatchImageSnapshot } from 'jest-image-snapshot'
 
+export function setConfig(filename) {
+    return {
+        failureThreshold: '0.01',
+        failureThresholdType: 'percent',
+        customSnapshotsDir: `${__dirname}/../__snapshots__/`,
+        customSnapshotIdentifier: filename,
+        noColors: true
+    }
+}
+
 let browser;
 let page;
 
