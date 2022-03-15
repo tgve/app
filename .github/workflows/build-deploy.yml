@@ -22,7 +22,7 @@ on:
 jobs:
     build-deploy:
       name: Build and deploy
-      runs-on: macos-11
+      runs-on: ubuntu-latest
       steps:
         - name: Setup Node.js for use with actions
           uses: actions/setup-node@v1
