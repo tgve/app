@@ -13,7 +13,7 @@
     "purge-tgvejs-react": "rm -rf node_modules/@tgve/tgvejs/node_modules/react/ && rm -rf node_modules/@tgve/tgvejs/node_modules/react-dom/",
     "start": "yarn purge-tgvejs-react && react-scripts start",
     "build": "react-scripts --max_old_space_size=8192 build",
-    "build-local": "json -I -f package.json -e 'this.homepage=\".\"' && GENERATE_SOURCEMAP=false yarn build",
+    "build-local": "PUBLIC_URL=. GENERATE_SOURCEMAP=false yarn build",
     "test": "react-scripts test",
     "test:e2e": "react-scripts test --testPathPattern=.*e2e.test.js$",
     "eject": "react-scripts eject"
