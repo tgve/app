@@ -1,6 +1,8 @@
 name: build-deploy
 
 on:
+  schedule:
+    - cron: '30 5 * * SAT'
   push:
     paths-ignore:
       - '**/README.*md'
