@@ -7,7 +7,7 @@ export function setConfig(filename) {
     return {
         failureThreshold: '0',
         failureThresholdType: 'percent',
-        customSnapshotsDir: `${__dirname}/../__snapshots__/`,
+        customSnapshotsDir: `${__dirname}/__snapshots__/`,
         customSnapshotIdentifier: filename,
         noColors: true
     }
