@@ -48,6 +48,17 @@ jobs:
             cd app
             yarn install  # CRA uses yarn by default
 
+        - name: Upgrade tgvejs
+          if: github.ref == 'refs/heads/release'
+          run: |
+            cd app
+            yarn upgrade @tgve/tgvejs --latest --caret
+            git config user.name github-actions
+            git config user.email github-actions@github.com
+            git add package.json yarn.lock
+            # default branch
+            if [[ `git status package.json yarn.lock --porcelain` ]]; then git commit -m "Upgrade tgvejs" && git push; else echo "No changes to commit"; fi
+
         - name: Build
           run: |
             cd app
