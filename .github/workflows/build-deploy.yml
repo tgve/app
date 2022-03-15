@@ -41,11 +41,15 @@ jobs:
             json -I -f package.json -e "this.homepage=\"https://${a[0]}.github.io/${a[1]}\""
             # debug
             cat package.json
-        - name: Install dependencies
-          run: yarn install  # CRA uses yarn by default
+        - name: Install
+          run: |
+            cd app
+            yarn install  # CRA uses yarn by default
 
         - name: Build
-          run: yarn run build
+          run: |
+            cd app
+            yarn run build
           env:
             CI: false
             REACT_APP_DEFAULT_URL: https://raw.githubusercontent.com/tgve/example-data/main/casualties.csv
