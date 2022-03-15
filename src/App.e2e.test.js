@@ -1,6 +1,7 @@
 import puppeteer from 'puppeteer'
 import url from 'url'
 import fs from 'fs'
+import { toMatchImageSnapshot } from 'jest-image-snapshot'
 
 let browser;
 let page;
@@ -8,6 +9,7 @@ let page;
 beforeAll(async () => {
     browser = await puppeteer.launch();
     page = await browser.newPage();
+    expect.extend({ toMatchImageSnapshot });
 });
 
 describe("App.js", () => {
