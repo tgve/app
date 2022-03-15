@@ -1,6 +1,8 @@
 name: build-deploy
 
 on:
+  schedule:
+    - cron: '30 5 * * SAT'
   push:
     paths-ignore:
       - '**/README.*md'
@@ -28,25 +30,43 @@ jobs:
             version: 12.x
         - name: Checkout branch
           uses: actions/checkout@v2
+          with:
+            path: app
 
-        - name: Set homepage - ${{ github.repository }}
+        - name: Set homepage
           # replace default values from the fork in `package.json`
           run: |
             set -x
+            cd app
             npm install -g json
             IFS="/" read -a a <<< ${{ github.repository }}
             json -I -f package.json -e "this.homepage=\"https://${a[0]}.github.io/${a[1]}\""
             # debug
             cat package.json
-        - name: Install dependencies
-          run: yarn install  # CRA uses yarn by default
+        - name: Install
+          run: |
+            cd app
+            yarn install  # CRA uses yarn by default
 
         - name: Build
-          run: yarn run build
+          run: |
+            cd app
+            yarn run build
           env:
             CI: false
             REACT_APP_DEFAULT_URL: https://raw.githubusercontent.com/tgve/example-data/main/casualties.csv
             REACT_APP_MAPBOX_ACCESS_TOKEN: ${{secrets.MAPBOX_KEY}}
+
+        - name: Checkout tgvejs (default branch)
+          uses: actions/checkout@v2
+          with:
+            path: tgvejs
+
+        - name: Test
+          run: |
+            cd app
+            yarn build-local
+            yarn test:e2e
 
         - name: Deploy
           if: github.ref == 'refs/heads/release'

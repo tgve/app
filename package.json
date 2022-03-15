@@ -13,8 +13,9 @@
     "purge-tgvejs-react": "rm -rf node_modules/@tgve/tgvejs/node_modules/react/ && rm -rf node_modules/@tgve/tgvejs/node_modules/react-dom/",
     "start": "yarn purge-tgvejs-react && react-scripts start",
     "build": "react-scripts --max_old_space_size=8192 build",
-    "build-local": "json -I -f package.json -e 'this.homepage=\".\"' && GENERATE_SOURCEMAP=false yarn build",
+    "build-local": "PUBLIC_URL=. GENERATE_SOURCEMAP=false yarn build",
     "test": "react-scripts test",
+    "test:e2e": "react-scripts test --testPathPattern=.*e2e.test.js$",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -41,7 +42,9 @@
     "@testing-library/user-event": "^12.8.3",
     "http-server": "^14.0.0",
     "jest-canvas-mock": "^2.3.1",
+    "jest-image-snapshot": "^4.5.1",
     "json": "^11.0.0",
+    "puppeteer": "^13.5.1",
     "react-scripts": "3.4.4"
   },
   "homepage": "https://tgve.github.io/app"
