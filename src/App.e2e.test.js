@@ -1,4 +1,4 @@
-import puppeteer from "puppeteer"
+import puppeteer from 'puppeteer'
 import url from 'url'
 import fs from 'fs'
 
