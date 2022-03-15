@@ -28,6 +28,8 @@ jobs:
             version: 12.x
         - name: Checkout branch
           uses: actions/checkout@v2
+          with:
+            path: app
 
         - name: Set homepage - ${{ github.repository }}
           # replace default values from the fork in `package.json`
@@ -47,6 +49,11 @@ jobs:
             CI: false
             REACT_APP_DEFAULT_URL: https://raw.githubusercontent.com/tgve/example-data/main/casualties.csv
             REACT_APP_MAPBOX_ACCESS_TOKEN: ${{secrets.MAPBOX_KEY}}
+
+        - name: Checkout tgvejs (default branch)
+          uses: actions/checkout@v2
+          with:
+            path: tgvejs
 
         - name: Test
           run: |
