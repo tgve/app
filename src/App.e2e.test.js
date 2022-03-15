@@ -64,13 +64,22 @@ describe("App.js", () => {
         await page.$eval('.loader',e => e.setAttribute("style", "visibility: hidden"));
         await page.waitForSelector(".side-pane-header");  
         const image = await page.screenshot({ fullPage: true }); 
-        expect(image).toMatchImageSnapshot(setConfig('image-name'));
+        expect(image).toMatchImageSnapshot(setConfig(expect.getState().currentTestName.replace(/\s+/g, '-')));
     });
 
-    
+    it("check screenshot with data uploaded", async () => {
+        await page.goto(url.pathToFileURL("build/index.html")
+        + "?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson",{
+            //waitUntil: "networkidle0",
+            });
+        await page.$eval('.mapboxgl-map',e => e.setAttribute("style", "visibility: hidden"));
+        await page.$eval('.loader',e => e.setAttribute("style", "visibility: hidden"));
+        await page.waitForSelector(".side-pane-header");  
+        const image = await page.screenshot({ fullPage: true }); 
+        expect(image).toMatchImageSnapshot(setConfig(expect.getState().currentTestName.replace(/\s+/g, '-')));
+    });
+
 })
-
-
 
 
 afterAll(async () => browser.close());
