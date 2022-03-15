@@ -2052,10 +2052,10 @@
   dependencies:
     "@babel/runtime" "^7.12.5"
 
-"@tgve/tgvejs@^1.4.5":
-  version "1.4.5"
-  resolved "https://registry.yarnpkg.com/@tgve/tgvejs/-/tgvejs-1.4.5.tgz#2fd73849d7fc470eb709f44665b7fc0bc66d824b"
-  integrity sha512-HwAlgBQafwVLNXdqMmYItpjQPQW6Cv82tPIgfWbToerI8K+2yMCWlzlOhMdwJ85rt6v4HT10fCS5V1tNEDAtgg==
+"@tgve/tgvejs@1.4.3":
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/@tgve/tgvejs/-/tgvejs-1.4.3.tgz#a62f890c0477422a3e76dc65865e9d7b604027c1"
+  integrity sha512-Qcj7WhG5riSxbDIM5hboevwnXfWzmfyfFAP/yHAVw6gsFOlak0ZcQN49adrnxLbodG/ep9Bj1luN0cWeOZeLAw==
   dependencies:
     "@turf/bbox" "^6.3.0"
     "@turf/bezier-spline" "^6.2.0"
