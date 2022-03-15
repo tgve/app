@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "./static/css/main.5e3647ae.chunk.css",
+    "main.js": "./static/js/main.b08700b4.chunk.js",
+    "runtime-main.js": "./static/js/runtime-main.986a0626.js",
+    "static/css/2.c3876fe1.chunk.css": "./static/css/2.c3876fe1.chunk.css",
+    "static/js/2.05ea639a.chunk.js": "./static/js/2.05ea639a.chunk.js",
+    "static/js/3.c62b9eb5.chunk.js": "./static/js/3.c62b9eb5.chunk.js",
+    "index.html": "./index.html",
+    "precache-manifest.a3307cd70cc7a9c1e72a1b1853826582.js": "./precache-manifest.a3307cd70cc7a9c1e72a1b1853826582.js",
+    "service-worker.js": "./service-worker.js",
+    "static/js/2.05ea639a.chunk.js.LICENSE.txt": "./static/js/2.05ea639a.chunk.js.LICENSE.txt",
+    "static/media/location-icon-atlas.png": "./static/media/location-icon-atlas.37932833.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.986a0626.js",
+    "static/css/2.c3876fe1.chunk.css",
+    "static/js/2.05ea639a.chunk.js",
+    "static/css/main.5e3647ae.chunk.css",
+    "static/js/main.b08700b4.chunk.js"
+  ]
+}
