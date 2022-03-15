@@ -64,7 +64,7 @@ jobs:
           run: |
             cd app
             yarn build-local
-            yarn start &
+#            yarn start &
             yarn test:e2e
 
         - name: Deploy

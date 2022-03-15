@@ -22,7 +22,6 @@ describe("App.js", () => {
         expect(text).toContain("Nothing to show")
     });
 
-
     it("contains the 100 rows", async () => {
         await page.goto(url.pathToFileURL("build/index.html")
             + "?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson");
