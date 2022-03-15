@@ -49,8 +49,9 @@ jobs:
             yarn install  # CRA uses yarn by default
 
         - name: Upgrade tgvejs
-          if: github.ref == 'refs/heads/tgvejs'
           uses: actions/checkout@v3
+          with:
+            ref: tgvejs
           run: |
             cd app
             yarn upgrade @tgve/tgvejs --latest --caret
