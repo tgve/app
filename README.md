@@ -29,7 +29,7 @@ With this template repository, it is easy to host your own instance of the Turin
 
 1. Create repo from this template
 > <img width="100%" style="border:1px solid" alt="Use this template button in green" src="https://user-images.githubusercontent.com/408568/109291248-a8ba4b80-7820-11eb-9054-5b8fb6f38f82.png">
-You should now have a copy (not fork) of the repo at `https://github.com/USER_OR_ORG/YOUR_REPO_NAME`
+You should now have a copy (not fork) of the repo at `https://github.com/USER_OR_ORG/YOUR_REPO_NAME`. The actions may not start running at this stage. In the next step we will make sure this happens.
 
 2. Edit `REACT_APP_DEFAULT_URL` in [`build-deploy.yml`](.github/workflows/build-deploy.yml) with the URL of your dataset. To pass separate data and geography URLs, use `REACT_APP_GEOGRAPHY_URL`, `REACT_APP_GEOGRAPHY_COLUMN` and `REACT_APP_COLUMN`, as described [here](https://github.com/tgve/tgvejs). Check out [`src/App.js`](src/App.js) to see how you can pass these variables to the TGVE React component.
 

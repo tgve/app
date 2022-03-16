@@ -48,7 +48,31 @@ jobs:
             cd app
             yarn install  # CRA uses yarn by default
 
-        - name: Build
+        - name: Upgrade tgvejs
+          if: github.ref == 'refs/heads/release'
+          run: |
+            cd app
+            yarn upgrade @tgve/tgvejs --latest --caret
+            git config user.name github-actions
+            git config user.email github-actions@github.com
+            git add package.json yarn.lock
+            # default branch
+            if [[ `git status package.json yarn.lock --porcelain` ]]; then git commit -m "Upgrade tgvejs" && git push; else echo "No changes to commit"; fi
+
+        - name: Checkout tgvejs (default branch)
+          uses: actions/checkout@v2
+          with:
+            path: tgvejs
+
+        - name: Test (inc e2e)
+          run: |
+            cd app
+            yarn build-local
+            yarn test
+            yarn test:e2e
+
+        - name: Build [release]
+          if: github.ref == 'refs/heads/release'
           run: |
             cd app
             yarn run build
@@ -57,18 +81,7 @@ jobs:
             REACT_APP_DEFAULT_URL: https://raw.githubusercontent.com/tgve/example-data/main/casualties.csv
             REACT_APP_MAPBOX_ACCESS_TOKEN: ${{secrets.MAPBOX_KEY}}
 
-        - name: Checkout tgvejs (default branch)
-          uses: actions/checkout@v2
-          with:
-            path: tgvejs
-
-        - name: Test
-          run: |
-            cd app
-            yarn build-local
-            yarn test:e2e
-
-        - name: Deploy
+        - name: Deploy [release]
           if: github.ref == 'refs/heads/release'
           uses: peaceiris/actions-gh-pages@v3
           with:
