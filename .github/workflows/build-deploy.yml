@@ -59,15 +59,6 @@ jobs:
             # default branch
             if [[ `git status package.json yarn.lock --porcelain` ]]; then git commit -m "Upgrade tgvejs" && git push; else echo "No changes to commit"; fi
 
-        - name: Build
-          run: |
-            cd app
-            yarn run build
-          env:
-            CI: false
-            REACT_APP_DEFAULT_URL: https://raw.githubusercontent.com/tgve/example-data/main/casualties.csv
-            REACT_APP_MAPBOX_ACCESS_TOKEN: ${{secrets.MAPBOX_KEY}}
-
         - name: Checkout tgvejs (default branch)
           uses: actions/checkout@v2
           with:
@@ -78,6 +69,10 @@ jobs:
             cd app
             yarn build-local
             yarn test:e2e
+          env:
+            CI: false
+            REACT_APP_DEFAULT_URL: https://raw.githubusercontent.com/tgve/example-data/main/casualties.csv
+            REACT_APP_MAPBOX_ACCESS_TOKEN: ${{secrets.MAPBOX_KEY}}
 
         - name: Deploy
           if: github.ref == 'refs/heads/release'
