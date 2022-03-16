@@ -1,22 +1,28 @@
 {
   "files": {
-    "main.css": "./static/css/main.5e3647ae.chunk.css",
-    "main.js": "./static/js/main.b08700b4.chunk.js",
-    "runtime-main.js": "./static/js/runtime-main.986a0626.js",
-    "static/css/2.c3876fe1.chunk.css": "./static/css/2.c3876fe1.chunk.css",
-    "static/js/2.05ea639a.chunk.js": "./static/js/2.05ea639a.chunk.js",
-    "static/js/3.c62b9eb5.chunk.js": "./static/js/3.c62b9eb5.chunk.js",
-    "index.html": "./index.html",
-    "precache-manifest.a3307cd70cc7a9c1e72a1b1853826582.js": "./precache-manifest.a3307cd70cc7a9c1e72a1b1853826582.js",
-    "service-worker.js": "./service-worker.js",
-    "static/js/2.05ea639a.chunk.js.LICENSE.txt": "./static/js/2.05ea639a.chunk.js.LICENSE.txt",
-    "static/media/location-icon-atlas.png": "./static/media/location-icon-atlas.37932833.png"
+    "main.css": "/app/static/css/main.d1b05096.chunk.css",
+    "main.js": "/app/static/js/main.20f8f99d.chunk.js",
+    "main.js.map": "/app/static/js/main.20f8f99d.chunk.js.map",
+    "runtime-main.js": "/app/static/js/runtime-main.e6c398f8.js",
+    "runtime-main.js.map": "/app/static/js/runtime-main.e6c398f8.js.map",
+    "static/css/2.231d0962.chunk.css": "/app/static/css/2.231d0962.chunk.css",
+    "static/js/2.05a56e4b.chunk.js": "/app/static/js/2.05a56e4b.chunk.js",
+    "static/js/2.05a56e4b.chunk.js.map": "/app/static/js/2.05a56e4b.chunk.js.map",
+    "static/js/3.c62b9eb5.chunk.js": "/app/static/js/3.c62b9eb5.chunk.js",
+    "static/js/3.c62b9eb5.chunk.js.map": "/app/static/js/3.c62b9eb5.chunk.js.map",
+    "index.html": "/app/index.html",
+    "precache-manifest.ec565469bf33ca662d47a3c93fb065a7.js": "/app/precache-manifest.ec565469bf33ca662d47a3c93fb065a7.js",
+    "service-worker.js": "/app/service-worker.js",
+    "static/css/2.231d0962.chunk.css.map": "/app/static/css/2.231d0962.chunk.css.map",
+    "static/css/main.d1b05096.chunk.css.map": "/app/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.05a56e4b.chunk.js.LICENSE.txt": "/app/static/js/2.05a56e4b.chunk.js.LICENSE.txt",
+    "static/media/location-icon-atlas.png": "/app/static/media/location-icon-atlas.37932833.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.986a0626.js",
-    "static/css/2.c3876fe1.chunk.css",
-    "static/js/2.05ea639a.chunk.js",
-    "static/css/main.5e3647ae.chunk.css",
-    "static/js/main.b08700b4.chunk.js"
+    "static/js/runtime-main.e6c398f8.js",
+    "static/css/2.231d0962.chunk.css",
+    "static/js/2.05a56e4b.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.20f8f99d.chunk.js"
   ]
 }
