@@ -64,17 +64,24 @@ jobs:
           with:
             path: tgvejs
 
-        - name: Test
+        - name: Test (inc e2e)
           run: |
             cd app
             yarn build-local
+            yarn test
             yarn test:e2e
+
+        - name: Build [release]
+          if: github.ref == 'refs/heads/release'
+          run: |
+            cd app
+            yarn run build
           env:
             CI: false
             REACT_APP_DEFAULT_URL: https://raw.githubusercontent.com/tgve/example-data/main/casualties.csv
             REACT_APP_MAPBOX_ACCESS_TOKEN: ${{secrets.MAPBOX_KEY}}
 
-        - name: Deploy
+        - name: Deploy [release]
           if: github.ref == 'refs/heads/release'
           uses: peaceiris/actions-gh-pages@v3
           with:
