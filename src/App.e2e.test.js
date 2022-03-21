@@ -25,10 +25,12 @@ async function waitForElementText(text,selector) {
     );
 }
 
-async function hideMap() {
+async function screenshot() {
     await page.$eval('.mapboxgl-map',e => e.setAttribute("style", "visibility: hidden"));
-    return page.$eval('.loader',e => e.setAttribute("style", "visibility: hidden"));
+    await page.$eval('.loader',e => e.setAttribute("style", "visibility: hidden"));
+    return page.screenshot({ fullPage: true });
 }
+
 
 
 let browser;
@@ -66,8 +68,7 @@ describe("App.js", () => {
         await page.goto(url.pathToFileURL("build/index.html"));
         await page.setViewport({ width: 600, height: 1000 });
         await waitForElementText("Nothing to show",'.side-pane-header > h2')
-        await hideMap();
-        const image = await page.screenshot({ fullPage: true });
+        const image = await screenshot();
         expect(image).toMatchImageSnapshot(setConfig());
     });
 
@@ -76,8 +77,7 @@ describe("App.js", () => {
         + "?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson");
         await page.setViewport({ width: 800, height: 1400 });
         await waitForElementText("100 rows",'.side-pane-header > h2')
-        await hideMap();
-        const image = await page.screenshot({ fullPage: true });
+        const image = await screenshot();
         expect(image).toMatchImageSnapshot(setConfig());
     });
 
