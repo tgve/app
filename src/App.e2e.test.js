@@ -3,6 +3,8 @@ import url from 'url'
 import fs from 'fs'
 import { toMatchImageSnapshot } from 'jest-image-snapshot'
 
+
+
 export function setConfig() {
     return {
         failureThreshold: '0.5',
@@ -32,7 +34,6 @@ async function screenshot() {
 }
 
 
-
 let browser;
 let page;
 
@@ -48,17 +49,20 @@ describe("App.js", () => {
     }
 
     it("no url includes Nothing to show", async () => {
+        await page.setViewport({ width: 800, height: 1400 });
         await page.goto(url.pathToFileURL("build/index.html"));
         return waitForElementText("Nothing to show",'.side-pane-header > h2')
     });
 
     it("contains 100 rows", async () => {
+        await page.setViewport({ width: 800, height: 1400 });
         await page.goto(url.pathToFileURL("build/index.html")
             + "?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson");
         return waitForElementText("100 rows",'.side-pane-header > h2')
     });
 
     it("wrong url includes Nothing to show", async () => {
+        await page.setViewport({ width: 800, height: 1400 });
         await page.goto(url.pathToFileURL("build/index.html")
             + "?defaultURL=https://wrongurl.fail");
         return waitForElementText("Nothing to show",'.side-pane-header > h2')
