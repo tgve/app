@@ -65,10 +65,9 @@ describe("App.js", () => {
     it("check screenshot", async () => {
         await page.goto(url.pathToFileURL("build/index.html"));
         await page.setViewport({ width: 600, height: 1000 });
-        const image = await page.screenshot({ fullPage: true });
-        await page.$eval('.mapboxgl-map',e => e.setAttribute("style", "visibility: hidden"));
-        await page.$eval('.loader',e => e.setAttribute("style", "visibility: hidden"));
         await waitForElementText("Nothing to show",'.side-pane-header > h2')
+        await hideMap();
+        const image = await page.screenshot({ fullPage: true });
         expect(image).toMatchImageSnapshot(setConfig());
     });
 
