@@ -13,6 +13,19 @@ export function setConfig() {
     }
 }
 
+async function waitForElementText(text,selector) { 
+    console.log(text)
+    page.waitForFunction(
+        selector => {
+            console.log("******TEST*****")
+            const e = document.querySelector(selector)
+            return e && e.textContent == text
+        },
+        {},
+        selector
+    );
+}
+
 let browser;
 let page;
 
@@ -37,14 +50,8 @@ describe("App.js", () => {
     it("contains 100 rows", async () => {
         await page.goto(url.pathToFileURL("build/index.html")
             + "?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson");
-        await page.waitForFunction(
-            selector => {
-                const e = document.querySelector(selector)
-                return e && e.textContent == "100 rows"
-            },
-            {},
-            '.side-pane-header > h2'
-        );
+        await waitForElementText("100 rows",'.side-pane-header > h2')
+
     });
 
     it("wrong url includes Nothing to show", async () => {
