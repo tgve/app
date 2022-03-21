@@ -37,7 +37,7 @@ describe("App.js", () => {
     it("contains 100 rows", async () => {
         await page.goto(url.pathToFileURL("build/index.html")
             + "?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson");
-        await page.waitForSelector(".side-pane-header");
+        await page.waitForSelector(".side-pane-header > h2");
         const text = await page.$eval(".side-pane-header > h2", (e) => e.textContent);
         expect(text).toContain("100 rows")
     });
