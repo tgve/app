@@ -34,7 +34,7 @@ describe("App.js", () => {
         expect(text).toContain("Nothing to show")
     });
 
-    it("contains the 100 rows", async () => {
+    it("contains 100 rows", async () => {
         await page.goto(url.pathToFileURL("build/index.html")
             + "?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson");
         await page.waitForSelector(".side-pane-header");
@@ -55,8 +55,8 @@ describe("App.js", () => {
         await page.setViewport({ width: 600, height: 1000 });
         await page.$eval('.mapboxgl-map',e => e.setAttribute("style", "visibility: hidden"));
         await page.$eval('.loader',e => e.setAttribute("style", "visibility: hidden"));
-        await page.waitForSelector(".side-pane-header");  
-        const image = await page.screenshot({ fullPage: true }); 
+        await page.waitForSelector(".side-pane-header");
+        const image = await page.screenshot({ fullPage: true });
         expect(image).toMatchImageSnapshot(setConfig());
     });
 
@@ -66,8 +66,8 @@ describe("App.js", () => {
         await page.setViewport({ width: 800, height: 1400 });
         await page.$eval('.mapboxgl-map',e => e.setAttribute("style", "visibility: hidden"));
         await page.$eval('.loader',e => e.setAttribute("style", "visibility: hidden"));
-        await page.waitForSelector(".side-pane-header");  
-        const image = await page.screenshot({ fullPage: true }); 
+        await page.waitForSelector(".side-pane-header");
+        const image = await page.screenshot({ fullPage: true });
         expect(image).toMatchImageSnapshot(setConfig());
     });
 
