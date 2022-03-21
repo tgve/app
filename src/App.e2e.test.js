@@ -13,16 +13,17 @@ export function setConfig() {
     }
 }
 
-async function waitForElementText(text,selector) { 
+async function waitForElementText(text,selector) {
     console.log(text)
-    page.waitForFunction(
-        selector => {
+    return page.waitForFunction(
+        (selector, text) => {
             console.log("******TEST*****")
             const e = document.querySelector(selector)
             return e && e.textContent == text
         },
         {},
-        selector
+        selector,
+        text
     );
 }
 
