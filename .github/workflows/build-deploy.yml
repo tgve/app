@@ -70,6 +70,13 @@ jobs:
             yarn build-local
             yarn test
             yarn test:e2e
+            
+        - name: Upload Snapshots
+          if: always()
+          uses: actions/upload-artifact@v1
+          with:
+            name: test-snapshots
+            path: app/src/__snapshots__
 
         - name: Build [release]
           if: github.ref == 'refs/heads/release'
