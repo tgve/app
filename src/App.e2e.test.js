@@ -41,9 +41,7 @@ describe("App.js", () => {
 
     it("no url includes Nothing to show", async () => {
         await page.goto(url.pathToFileURL("build/index.html"));
-        await page.waitForSelector(".side-pane-header");
-        const text = await page.$eval(".side-pane-header > h2", (e) => e.textContent);
-        expect(text).toContain("Nothing to show")
+        await waitForElementText("Nothing to show",'.side-pane-header > h2')
     });
 
     it("contains 100 rows", async () => {
@@ -54,9 +52,7 @@ describe("App.js", () => {
 
     it("wrong url includes Nothing to show", async () => {
         await page.goto(url.pathToFileURL("build/index.html")
-            + "?defaultURL=https://rongurl.fail");
-        await page.waitForSelector(".side-pane-header");
-        const text = await page.$eval(".side-pane-header > h2", (e) => e.textContent);
+            + "?defaultURL=https://wrongurl.fail");
         await waitForElementText("Nothing to show",'.side-pane-header > h2')
     });
 
