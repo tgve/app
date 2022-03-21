@@ -14,10 +14,8 @@ export function setConfig() {
 }
 
 async function waitForElementText(text,selector) {
-    console.log(text)
     return page.waitForFunction(
         (selector, text) => {
-            console.log("******TEST*****")
             const e = document.querySelector(selector)
             return e && e.textContent == text
         },
@@ -52,7 +50,6 @@ describe("App.js", () => {
         await page.goto(url.pathToFileURL("build/index.html")
             + "?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson");
         await waitForElementText("100 rows",'.side-pane-header > h2')
-
     });
 
     it("wrong url includes Nothing to show", async () => {
@@ -60,7 +57,7 @@ describe("App.js", () => {
             + "?defaultURL=https://rongurl.fail");
         await page.waitForSelector(".side-pane-header");
         const text = await page.$eval(".side-pane-header > h2", (e) => e.textContent);
-        expect(text).toContain("Nothing to show")
+        await waitForElementText("Nothing to show",'.side-pane-header > h2')
     });
 
     it("check screenshot", async () => {
