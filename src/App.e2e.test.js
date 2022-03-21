@@ -19,7 +19,7 @@ async function waitForElementText(text,selector) {
             const e = document.querySelector(selector)
             return e && e.textContent == text
         },
-        {},
+        {timeout:30000},
         selector,
         text
     );
