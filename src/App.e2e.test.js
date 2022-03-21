@@ -25,6 +25,12 @@ async function waitForElementText(text,selector) {
     );
 }
 
+async function hideMap() {
+    await page.$eval('.mapboxgl-map',e => e.setAttribute("style", "visibility: hidden"));
+    return page.$eval('.loader',e => e.setAttribute("style", "visibility: hidden"));
+}
+
+
 let browser;
 let page;
 
@@ -71,8 +77,7 @@ describe("App.js", () => {
         + "?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson");
         await page.setViewport({ width: 800, height: 1400 });
         await waitForElementText("100 rows",'.side-pane-header > h2')
-        await page.$eval('.mapboxgl-map',e => e.setAttribute("style", "visibility: hidden"));
-        await page.$eval('.loader',e => e.setAttribute("style", "visibility: hidden"));
+        await hideMap();
         const image = await page.screenshot({ fullPage: true });
         expect(image).toMatchImageSnapshot(setConfig());
     });
@@ -81,7 +86,3 @@ describe("App.js", () => {
 
 
 afterAll(async () => browser.close());
-
-// mapboxgl-map
-//=> e.setAttribute("visibility", "hidden
-//await page.$eval(' div.panel-footer > div > div > ul > li:nth-child(3) > a ',e => e.setAttribute("data-page","100"));
