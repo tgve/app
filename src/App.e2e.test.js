@@ -52,7 +52,7 @@ describe("App.js", () => {
 
     it("check screenshot", async () => {
         await page.goto(url.pathToFileURL("build/index.html"));
-        await page.setViewport({ width: 1280, height: 1400 });
+        await page.setViewport({ width: 600, height: 1000 });
         await page.$eval('.mapboxgl-map',e => e.setAttribute("style", "visibility: hidden"));
         await page.$eval('.loader',e => e.setAttribute("style", "visibility: hidden"));
         await page.waitForSelector(".side-pane-header");  
@@ -63,7 +63,7 @@ describe("App.js", () => {
     it("check screenshot with data uploaded", async () => {
         await page.goto(url.pathToFileURL("build/index.html")
         + "?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson");
-        await page.setViewport({ width: 1280, height: 1400 });
+        await page.setViewport({ width: 800, height: 1400 });
         await page.$eval('.mapboxgl-map',e => e.setAttribute("style", "visibility: hidden"));
         await page.$eval('.loader',e => e.setAttribute("style", "visibility: hidden"));
         await page.waitForSelector(".side-pane-header");  
