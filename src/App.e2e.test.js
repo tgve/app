@@ -41,10 +41,11 @@ let page;
 beforeAll(async () => {
     browser = await puppeteer.launch({
         dumpio: false // if true then formidable amount of console logging
-    });
-    page = await browser.newPage();
-    await page.setViewport({ width: 800, height: 1400 });
-    expect.extend({ toMatchImageSnapshot });
+    })
+    page = await browser.newPage()
+    await page.setViewport({ width: 800, height: 1400 })
+    expect.extend({ toMatchImageSnapshot })
+    jest.setTimeout(30000)
 });
 
 afterAll(async () => browser.close());
