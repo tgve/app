@@ -95,7 +95,6 @@ describe("App.js", () => {
         const xp = "//div[contains(@class, 'side-panel-body-content')]//div"
             + "/span[contains(text(),'Slight')]/.."
         const [e] = await page.$x(xp)
-        await e.hover()
         await e.click()
 
         const image = await screenshot()
