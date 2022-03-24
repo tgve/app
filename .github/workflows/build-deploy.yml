@@ -22,7 +22,7 @@ on:
 jobs:
     build-deploy:
       name: Build and deploy
-      runs-on: ubuntu-latest
+      runs-on: macos-10.15
       steps:
         - name: Setup Node.js for use with actions
           uses: actions/setup-node@v1
@@ -70,7 +70,7 @@ jobs:
             yarn build-local
             yarn test
             yarn test:e2e
-            
+
         - name: Upload Snapshots
           if: always()
           uses: actions/upload-artifact@v1
