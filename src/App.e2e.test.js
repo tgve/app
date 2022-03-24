@@ -97,6 +97,7 @@ describe("App.js", () => {
             + "/span[contains(text(),'Slight')]/.."
         const [e] = await page.$x(xp)
         await e.click()
+        await waitForElementText('.side-pane-header > h2', "82 rows of 100")
 
         const image = await screenshot()
         expect(image).toMatchImageSnapshot(setConfig())
