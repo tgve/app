@@ -39,9 +39,7 @@ let browser;
 let page;
 
 beforeAll(async () => {
-    browser = await puppeteer.launch({
-        dumpio: false // if true then formidable amount of console logging
-    })
+    browser = await puppeteer.launch()
     page = await browser.newPage()
     await page.setViewport({ width: 800, height: 1400 })
     expect.extend({ toMatchImageSnapshot })
