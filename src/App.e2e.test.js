@@ -32,7 +32,7 @@ async function waitForElementText(selector, text) {
 async function screenshot() {
     await page.$eval('.mapboxgl-map', e => e.setAttribute("style", "visibility: hidden"));
     await page.$eval('.loader', e => e.setAttribute("style", "visibility: hidden"));
-    await page.screenshot({ fullPage: true });
+    return page.screenshot({ fullPage: true });
 }
 
 let browser;
