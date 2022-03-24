@@ -32,7 +32,7 @@ async function waitForElementText(selector, text) {
 async function screenshot() {
     await page.$eval('.mapboxgl-map', e => e.setAttribute("style", "visibility: hidden"));
     await page.$eval('.loader', e => e.setAttribute("style", "visibility: hidden"));
-    return page.screenshot({ fullPage: true });
+    await page.screenshot({ fullPage: true });
 }
 
 let browser;
@@ -57,19 +57,19 @@ describe("App.js", () => {
 
     it("no URL: includes Nothing to show", async () => {
         await page.goto(url.pathToFileURL("build/index.html"));
-        return waitForElementText('.side-pane-header > h2', "Nothing to show")
+        await waitForElementText('.side-pane-header > h2', "Nothing to show")
     });
 
     it("casualties_100: includes 100 rows", async () => {
         await page.goto(url.pathToFileURL("build/index.html")
             + "?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson");
-        return waitForElementText('.side-pane-header > h2', "100 rows")
+        await waitForElementText('.side-pane-header > h2', "100 rows")
     });
 
     it("wrong URL: includes Nothing to show", async () => {
         await page.goto(url.pathToFileURL("build/index.html")
             + "?defaultURL=https://wrongurl.fail");
-        return waitForElementText('.side-pane-header > h2', "Nothing to show")
+        await waitForElementText('.side-pane-header > h2', "Nothing to show")
     });
 
     it("check screenshot", async () => {
