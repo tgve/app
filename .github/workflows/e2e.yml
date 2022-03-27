@@ -1,4 +1,4 @@
-name: build-deploy
+name: e2e
 
 on:
   schedule:
