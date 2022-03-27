@@ -39,9 +39,7 @@ let browser;
 let page;
 
 beforeAll(async () => {
-    browser = await puppeteer.launch({
-        dumpio: false // if true then formidable amount of console logging
-    })
+    browser = await puppeteer.launch()
     page = await browser.newPage()
     await page.setViewport({ width: 800, height: 1400 })
     expect.extend({ toMatchImageSnapshot })
@@ -57,19 +55,19 @@ describe("App.js", () => {
 
     it("no URL: includes Nothing to show", async () => {
         await page.goto(url.pathToFileURL("build/index.html"));
-        return waitForElementText('.side-pane-header > h2', "Nothing to show")
+        await waitForElementText('.side-pane-header > h2', "Nothing to show")
     });
 
     it("casualties_100: includes 100 rows", async () => {
         await page.goto(url.pathToFileURL("build/index.html")
             + "?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson");
-        return waitForElementText('.side-pane-header > h2', "100 rows")
+        await waitForElementText('.side-pane-header > h2', "100 rows")
     });
 
     it("wrong URL: includes Nothing to show", async () => {
         await page.goto(url.pathToFileURL("build/index.html")
             + "?defaultURL=https://wrongurl.fail");
-        return waitForElementText('.side-pane-header > h2', "Nothing to show")
+        await waitForElementText('.side-pane-header > h2', "Nothing to show")
     });
 
     it("check screenshot", async () => {
@@ -97,6 +95,7 @@ describe("App.js", () => {
             + "/span[contains(text(),'Slight')]/.."
         const [e] = await page.$x(xp)
         await e.click()
+        await waitForElementText('.side-pane-header > h2', "82 rows of 100")
 
         const image = await screenshot()
         expect(image).toMatchImageSnapshot(setConfig())
