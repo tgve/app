@@ -1,0 +1,52 @@
+name: build-deploy
+
+on:
+  schedule:
+    - cron: '30 5 * * SAT'
+  push:
+    paths-ignore:
+      - '**/README.*md'
+      - 'notes/**'
+      - 'Python/**'
+      - 'R/**'
+      - 'Dockerfile*'
+  pull_request:
+    paths-ignore:
+      - '**/README.*md'
+      - 'notes/**'
+      - 'Python/**'
+      - 'R/**'
+      - 'Dockerfile*'
+  workflow_dispatch:
+  jobs:
+    build-deploy:
+      name: Test e2e
+      runs-on: ubuntu-latest
+      steps:
+        - name: Setup Node.js for use with actions
+          uses: actions/setup-node@v1
+          with:
+            version: 12.x
+        - name: Checkout branch
+          uses: actions/checkout@v2
+          with:
+            path: app
+
+        # TODO: remove or setup fully
+        - name: Checkout tgvejs (default branch)
+          uses: actions/checkout@v2
+          with:
+            path: tgvejs
+
+        - name: Test e2e
+          run: |
+            cd app
+            yarn build-local
+            yarn test:e2e
+
+        - name: Upload Snapshots
+          if: always()
+          uses: actions/upload-artifact@v1
+          with:
+            name: test-snapshots
+            path: app/src/__snapshots__

@@ -59,24 +59,10 @@ jobs:
             # default branch
             if [[ `git status package.json yarn.lock --porcelain` ]]; then git commit -m "Upgrade tgvejs" && git push; else echo "No changes to commit"; fi
 
-        - name: Checkout tgvejs (default branch)
-          uses: actions/checkout@v2
-          with:
-            path: tgvejs
-
-        - name: Test (inc e2e)
+        - name: Test
           run: |
             cd app
-            yarn build-local
             yarn test
-            yarn test:e2e
-            
-        - name: Upload Snapshots
-          if: always()
-          uses: actions/upload-artifact@v1
-          with:
-            name: test-snapshots
-            path: app/src/__snapshots__
 
         - name: Build [release]
           if: github.ref == 'refs/heads/release'
