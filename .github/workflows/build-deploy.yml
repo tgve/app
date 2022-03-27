@@ -62,7 +62,7 @@ jobs:
         - name: Test
           run: |
             cd app
-            yarn test --testPathIgnorePatterns=./src/*.e2e.*
+            yarn test --testPathIgnorePatterns=/*.e2e.*
 
         - name: Build [release]
           if: github.ref == 'refs/heads/release'
