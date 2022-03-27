@@ -42,6 +42,7 @@ jobs:
       - name: Test e2e
         run: |
           cd app
+          yarn
           yarn build-local
           yarn test:e2e
 
