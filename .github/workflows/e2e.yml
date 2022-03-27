@@ -20,7 +20,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-deploy:
+  e2e:
     name: Test e2e
     runs-on: ubuntu-latest
     steps:
