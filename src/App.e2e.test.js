@@ -3,7 +3,6 @@ import url from 'url'
 import fs from 'fs'
 import { toMatchImageSnapshot } from 'jest-image-snapshot'
 
-
 export function setConfig() {
     return {
         failureThreshold: '0.5',
