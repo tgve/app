@@ -41,14 +41,19 @@ jobs:
         - name: Checkout tgvejs (default branch)
           uses: actions/checkout@v2
           with:
+            repository: tgve/tgvejs
             path: tgvejs
 
-        - name: Test (inc e2e)
+        - name: Test (e2e)
           run: |
+            set -x
+            cd tgvejs
+              yarn install
+              yarn link
+            cd ..
             cd app
-            yarn build-local
-            yarn test
-            yarn test:e2e
+              yarn build-local
+              yarn test:e2e
 
         - name: Upload Snapshots
           if: always()
