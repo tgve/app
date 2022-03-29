@@ -38,7 +38,7 @@ let page;
 
 beforeAll(async () => {
     browser = await puppeteer.launch({
-        dumpio: true // if true then formidable amount of console logging
+        dumpio: false // if true then formidable amount of console logging
     })
     page = await browser.newPage()
     await page.setViewport({ width: 800, height: 1400 })
@@ -64,22 +64,22 @@ describe("App.js", () => {
         return waitForElementText('.side-panel > div > h2', "100 rows")
     });
 
-/*
+
     it("wrong URL: includes Nothing to show", async () => {
-        await page.goto(url.pathToFileURL("build/index.html")
+        await page.goto("http://localhost:3000/app"
             + "?defaultURL=https://wrongurl.fail");
         return waitForElementText('.side-panel > div > h2', "Nothing to show")
     });
 
     it("check screenshot", async () => {
-        await page.goto(url.pathToFileURL("build/index.html"));
+        await page.goto("http://localhost:3000/app");
         await waitForElementText('.side-panel > div > h2', "Nothing to show")
         const image = await screenshot();
         expect(image).toMatchImageSnapshot(setConfig());
     });
 
     it("check screenshot with data uploaded", async () => {
-        await page.goto(url.pathToFileURL("build/index.html")
+        await page.goto("http://localhost:3000/app"
             + "?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson");
         await waitForElementText('.side-panel > div > h2', "100 rows")
         const image = await screenshot();
@@ -87,7 +87,7 @@ describe("App.js", () => {
     });
 
     it("check screenshot with filter", async () => {
-        await page.goto(url.pathToFileURL("build/index.html")
+        await page.goto("http://localhost:3000/app"
             + "?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson")
         await waitForElementText('.side-panel > div > h2', "100 rows")
         await waitForElementText('.side-panel-body-content > div > span', "Slight")
@@ -100,5 +100,4 @@ describe("App.js", () => {
         const image = await screenshot()
         expect(image).toMatchImageSnapshot(setConfig())
     })
-*/
 })
