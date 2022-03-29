@@ -46,6 +46,7 @@ jobs:
 
         - name: Test (e2e)
           run: |
+            set -x
             cd tgvejs
               yarn install
               yarn link
