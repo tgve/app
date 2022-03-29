@@ -41,9 +41,10 @@ jobs:
         - name: Checkout tgvejs (default branch)
           uses: actions/checkout@v2
           with:
+            repository: tgve/tgvejs
             path: tgvejs
 
-        - name: Test (inc e2e)
+        - name: Test (e2e)
           run: |
             cd app
             yarn build-local
