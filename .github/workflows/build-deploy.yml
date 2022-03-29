@@ -53,7 +53,6 @@ jobs:
               yarn dist
             cd ..
             cd app
-          # yarn link @tgve/tgvejs
               yarn build-local
               yarn test:e2e
 
