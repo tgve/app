@@ -54,12 +54,12 @@ describe("App.js", () => {
     }
 
     it("no URL: includes Nothing to show", async () => {
-        await page.goto("http://192.168.1.125:3000/app");
+        await page.goto("http://localhost:3000/app");
         return waitForElementText('.side-panel > div > h2', "Nothing to show")
     });
 
     it("casualties_100: includes 100 rows", async () => {
-        await page.goto("http://192.168.1.125:3000/app"
+        await page.goto("http://localhost:3000/app"
             + "?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson");
         return waitForElementText('.side-panel > div > h2', "100 rows")
     });
