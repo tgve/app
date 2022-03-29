@@ -63,7 +63,6 @@ jobs:
             set -x
             cd app
             IFS="/" read -a a <<< ${{ github.repository }}
-            PUBLIC_URL="https://${a[0]}.github.io/${a[1]}" echo $PUBLIC_URL
             PUBLIC_URL="https://${a[0]}.github.io/${a[1]}" yarn build
           env:
             CI: false
