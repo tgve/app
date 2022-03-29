@@ -57,22 +57,23 @@ describe("App.js", () => {
         await page.goto("http://192.168.1.125:3000/app");
         return waitForElementText('.side-panel > div > h2', "Nothing to show")
     });
-/*
+
     it("casualties_100: includes 100 rows", async () => {
-        await page.goto(url.pathToFileURL("build/index.html")
+        await page.goto("http://192.168.1.125:3000/app"
             + "?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson");
-        return waitForElementText('.side-pane-header > h2', "100 rows")
+        return waitForElementText('.side-panel > div > h2', "100 rows")
     });
 
+/*
     it("wrong URL: includes Nothing to show", async () => {
         await page.goto(url.pathToFileURL("build/index.html")
             + "?defaultURL=https://wrongurl.fail");
-        return waitForElementText('.side-pane-header > h2', "Nothing to show")
+        return waitForElementText('.side-panel > div > h2', "Nothing to show")
     });
 
     it("check screenshot", async () => {
         await page.goto(url.pathToFileURL("build/index.html"));
-        await waitForElementText('.side-pane-header > h2', "Nothing to show")
+        await waitForElementText('.side-panel > div > h2', "Nothing to show")
         const image = await screenshot();
         expect(image).toMatchImageSnapshot(setConfig());
     });
@@ -80,7 +81,7 @@ describe("App.js", () => {
     it("check screenshot with data uploaded", async () => {
         await page.goto(url.pathToFileURL("build/index.html")
             + "?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson");
-        await waitForElementText('.side-pane-header > h2', "100 rows")
+        await waitForElementText('.side-panel > div > h2', "100 rows")
         const image = await screenshot();
         expect(image).toMatchImageSnapshot(setConfig());
     });
@@ -88,7 +89,7 @@ describe("App.js", () => {
     it("check screenshot with filter", async () => {
         await page.goto(url.pathToFileURL("build/index.html")
             + "?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson")
-        await waitForElementText('.side-pane-header > h2', "100 rows")
+        await waitForElementText('.side-panel > div > h2', "100 rows")
         await waitForElementText('.side-panel-body-content > div > span', "Slight")
 
         const xp = "//div[contains(@class, 'side-panel-body-content')]//div"
