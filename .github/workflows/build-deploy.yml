@@ -50,6 +50,7 @@ jobs:
             cd tgvejs
               yarn install
               yarn link
+              yarn dist
             cd ..
             cd app
               yarn link @tgve/tgvejs
