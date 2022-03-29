@@ -54,6 +54,7 @@ jobs:
             cd ..
             cd app
               yarn build-local
+              yarn start &
               yarn test:e2e
 
         - name: Upload Snapshots
