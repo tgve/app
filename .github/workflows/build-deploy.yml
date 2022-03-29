@@ -46,9 +46,13 @@ jobs:
 
         - name: Test (e2e)
           run: |
+            cd tgvejs
+              yarn install
+              yarn link
+            cd ..
             cd app
-            yarn build-local
-            yarn test:e2e
+              yarn build-local
+              yarn test:e2e
 
         - name: Upload Snapshots
           if: always()
