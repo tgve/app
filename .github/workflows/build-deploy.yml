@@ -47,7 +47,6 @@ jobs:
           run: |
             cd app
             yarn build-local
-            yarn test
             yarn test:e2e
 
         - name: Upload Snapshots
