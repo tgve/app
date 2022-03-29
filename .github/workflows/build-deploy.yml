@@ -58,7 +58,7 @@ jobs:
             path: app/src/__snapshots__
 
         - name: Build [release]
-          # if: github.ref == 'refs/heads/release'
+          if: github.ref == 'refs/heads/release'
           run: |
             set -x
             cd app
@@ -70,7 +70,7 @@ jobs:
             REACT_APP_MAPBOX_ACCESS_TOKEN: ${{secrets.MAPBOX_KEY}}
 
         - name: Deploy [release]
-          # if: github.ref == 'refs/heads/release'
+          if: github.ref == 'refs/heads/release'
           uses: peaceiris/actions-gh-pages@v3
           with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
