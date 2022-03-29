@@ -57,7 +57,7 @@ describe("App.js", () => {
         await page.goto(url.pathToFileURL("build/index.html"));
         return waitForElementText('.side-pane-header > h2', "Nothing to show")
     });
-
+/*
     it("casualties_100: includes 100 rows", async () => {
         await page.goto(url.pathToFileURL("build/index.html")
             + "?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson");
@@ -99,4 +99,5 @@ describe("App.js", () => {
         const image = await screenshot()
         expect(image).toMatchImageSnapshot(setConfig())
     })
+*/
 })
