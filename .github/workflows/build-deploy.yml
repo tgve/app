@@ -33,16 +33,6 @@ jobs:
           with:
             path: app
 
-        - name: Set homepage
-          # replace default values from the fork in `package.json`
-          run: |
-            set -x
-            cd app
-            npm install -g json
-            IFS="/" read -a a <<< ${{ github.repository }}
-            json -I -f package.json -e "this.homepage=\"https://${a[0]}.github.io/${a[1]}\""
-            # debug
-            cat package.json
         - name: Install
           run: |
             cd app
@@ -70,8 +60,10 @@ jobs:
         - name: Build [release]
           if: github.ref == 'refs/heads/release'
           run: |
+            set -x
             cd app
-            yarn run build
+            IFS="/" read -a a <<< ${{ github.repository }}
+            PUBLIC_URL="https://${a[0]}.github.io/${a[1]}" yarn build
           env:
             CI: false
             REACT_APP_DEFAULT_URL: https://raw.githubusercontent.com/tgve/example-data/main/casualties.csv
