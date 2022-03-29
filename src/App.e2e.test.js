@@ -54,8 +54,8 @@ describe("App.js", () => {
     }
 
     it("no URL: includes Nothing to show", async () => {
-        await page.goto(url.pathToFileURL("build/index.html"));
-        return waitForElementText('.side-pane-header > h2', "Nothing to show")
+        await page.goto("http://192.168.1.125:3000/app");
+        return waitForElementText('.side-panel > div > h2', "Nothing to show")
     });
 /*
     it("casualties_100: includes 100 rows", async () => {
