@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "https://tgve.github.io/app/static/css/main.b9d54475.chunk.css",
-    "main.js": "https://tgve.github.io/app/static/js/main.0b842fb5.chunk.js",
-    "main.js.map": "https://tgve.github.io/app/static/js/main.0b842fb5.chunk.js.map",
+    "main.js": "https://tgve.github.io/app/static/js/main.07408da8.chunk.js",
+    "main.js.map": "https://tgve.github.io/app/static/js/main.07408da8.chunk.js.map",
     "runtime-main.js": "https://tgve.github.io/app/static/js/runtime-main.82129b78.js",
     "runtime-main.js.map": "https://tgve.github.io/app/static/js/runtime-main.82129b78.js.map",
-    "static/js/2.d2d4046f.chunk.js": "https://tgve.github.io/app/static/js/2.d2d4046f.chunk.js",
-    "static/js/2.d2d4046f.chunk.js.map": "https://tgve.github.io/app/static/js/2.d2d4046f.chunk.js.map",
+    "static/js/2.cad7ff37.chunk.js": "https://tgve.github.io/app/static/js/2.cad7ff37.chunk.js",
+    "static/js/2.cad7ff37.chunk.js.map": "https://tgve.github.io/app/static/js/2.cad7ff37.chunk.js.map",
     "static/js/3.559731a2.chunk.js": "https://tgve.github.io/app/static/js/3.559731a2.chunk.js",
     "static/js/3.559731a2.chunk.js.map": "https://tgve.github.io/app/static/js/3.559731a2.chunk.js.map",
     "index.html": "https://tgve.github.io/app/index.html",
-    "precache-manifest.8823234d0766df6207a6796abfe7fe23.js": "https://tgve.github.io/app/precache-manifest.8823234d0766df6207a6796abfe7fe23.js",
+    "precache-manifest.a742a23c49becc95c854e17d34266802.js": "https://tgve.github.io/app/precache-manifest.a742a23c49becc95c854e17d34266802.js",
     "service-worker.js": "https://tgve.github.io/app/service-worker.js",
     "static/css/main.b9d54475.chunk.css.map": "https://tgve.github.io/app/static/css/main.b9d54475.chunk.css.map",
-    "static/js/2.d2d4046f.chunk.js.LICENSE.txt": "https://tgve.github.io/app/static/js/2.d2d4046f.chunk.js.LICENSE.txt",
+    "static/js/2.cad7ff37.chunk.js.LICENSE.txt": "https://tgve.github.io/app/static/js/2.cad7ff37.chunk.js.LICENSE.txt",
     "static/media/location-icon-atlas.png": "https://tgve.github.io/app/static/media/location-icon-atlas.37932833.png"
   },
   "entrypoints": [
     "static/js/runtime-main.82129b78.js",
-    "static/js/2.d2d4046f.chunk.js",
+    "static/js/2.cad7ff37.chunk.js",
     "static/css/main.b9d54475.chunk.css",
-    "static/js/main.0b842fb5.chunk.js"
+    "static/js/main.07408da8.chunk.js"
   ]
 }
