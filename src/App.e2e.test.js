@@ -3,6 +3,8 @@ import url from 'url'
 import fs from 'fs'
 import { toMatchImageSnapshot } from 'jest-image-snapshot'
 
+const timeout = 60000
+
 export function setConfig() {
     return {
         failureThreshold: '0.5',
@@ -21,7 +23,7 @@ async function waitForElementText(selector, text) {
             console.log(`Found ${es.length} nodes matching ${selector}`)
             return es.some(e => e.textContent == text)
         },
-        { timeout: 30000 },
+        { timeout: 60000 },
         selector,
         text
     )
@@ -43,7 +45,7 @@ beforeAll(async () => {
     page = await browser.newPage()
     await page.setViewport({ width: 800, height: 1400 })
     expect.extend({ toMatchImageSnapshot })
-    jest.setTimeout(30000)
+    jest.setTimeout(60000)
 });
 
 afterAll(async () => browser.close());
