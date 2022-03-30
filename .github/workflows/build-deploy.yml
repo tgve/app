@@ -44,7 +44,7 @@ jobs:
             repository: tgve/tgvejs
             path: tgvejs
 
-        - name: Test (e2e)
+        - name: Build [local]
           run: |
             set -x
             cd tgvejs
@@ -55,7 +55,9 @@ jobs:
             cd app
               yarn link @tgve/tgvejs
               yarn build-local
-              yarn test
+
+        - name: Test (e2e)
+          run: cd app & yarn test
 
         - name: Upload Snapshots
           if: always()
