@@ -3,7 +3,7 @@ import url from 'url'
 import fs from 'fs'
 import { toMatchImageSnapshot } from 'jest-image-snapshot'
 
-const timeout = 60000
+const timeout = 30000
 
 export function setConfig() {
     return {
