@@ -57,7 +57,7 @@ jobs:
               yarn build-local
 
         - name: Test (e2e)
-          run: cd app & yarn test
+          run: cd app && yarn test
 
         - name: Upload Snapshots
           if: always()
