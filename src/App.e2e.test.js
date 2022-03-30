@@ -92,7 +92,7 @@ describe("App.js", () => {
         await page.goto("http://localhost:3000/app"
             + "?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson")
         await waitForElementText('.side-panel > div > h2', "100 rows")
-        await waitForElementText('.side-panel-body-content > div > span', "Slight")
+        await waitForElementText('.side-panel-body-content > div > div > div > span', "Slight")
 
         const xp = "//div[contains(@class, 'side-panel-body-content')]//div"
             + "/span[contains(text(),'Slight')]/.."
