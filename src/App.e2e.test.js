@@ -3,6 +3,8 @@ import url from 'url'
 import fs from 'fs'
 import { toMatchImageSnapshot } from 'jest-image-snapshot'
 
+const timeout = 30000
+
 export function setConfig() {
     return {
         failureThreshold: '0.5',
@@ -21,7 +23,7 @@ async function waitForElementText(selector, text) {
             console.log(`Found ${es.length} nodes matching ${selector}`)
             return es.some(e => e.textContent == text)
         },
-        { timeout: 30000 },
+        { timeout: 60000 },
         selector,
         text
     )
@@ -43,7 +45,7 @@ beforeAll(async () => {
     page = await browser.newPage()
     await page.setViewport({ width: 800, height: 1400 })
     expect.extend({ toMatchImageSnapshot })
-    jest.setTimeout(30000)
+    jest.setTimeout(60000)
 });
 
 afterAll(async () => browser.close());
@@ -54,42 +56,43 @@ describe("App.js", () => {
     }
 
     it("no URL: includes Nothing to show", async () => {
-        await page.goto(url.pathToFileURL("build/index.html"));
-        return waitForElementText('.side-pane-header > h2', "Nothing to show")
+        await page.goto("http://localhost:3000/app");
+        return waitForElementText('.side-panel > div > h2', "Nothing to show")
     });
 
     it("casualties_100: includes 100 rows", async () => {
-        await page.goto(url.pathToFileURL("build/index.html")
+        await page.goto("http://localhost:3000/app"
             + "?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson");
-        return waitForElementText('.side-pane-header > h2', "100 rows")
+        return waitForElementText('.side-panel > div > h2', "100 rows")
     });
 
+
     it("wrong URL: includes Nothing to show", async () => {
-        await page.goto(url.pathToFileURL("build/index.html")
+        await page.goto("http://localhost:3000/app"
             + "?defaultURL=https://wrongurl.fail");
-        return waitForElementText('.side-pane-header > h2', "Nothing to show")
+        return waitForElementText('.side-panel > div > h2', "Nothing to show")
     });
 
     it("check screenshot", async () => {
-        await page.goto(url.pathToFileURL("build/index.html"));
-        await waitForElementText('.side-pane-header > h2', "Nothing to show")
+        await page.goto("http://localhost:3000/app");
+        await waitForElementText('.side-panel > div > h2', "Nothing to show")
         const image = await screenshot();
         expect(image).toMatchImageSnapshot(setConfig());
     });
 
     it("check screenshot with data uploaded", async () => {
-        await page.goto(url.pathToFileURL("build/index.html")
+        await page.goto("http://localhost:3000/app"
             + "?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson");
-        await waitForElementText('.side-pane-header > h2', "100 rows")
+        await waitForElementText('.side-panel > div > h2', "100 rows")
         const image = await screenshot();
         expect(image).toMatchImageSnapshot(setConfig());
     });
 
     it("check screenshot with filter", async () => {
-        await page.goto(url.pathToFileURL("build/index.html")
+        await page.goto("http://localhost:3000/app"
             + "?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson")
-        await waitForElementText('.side-pane-header > h2', "100 rows")
-        await waitForElementText('.side-panel-body-content > div > span', "Slight")
+        await waitForElementText('.side-panel > div > h2', "100 rows")
+        await waitForElementText('.side-panel-body-content > div > div > div > span', "Slight")
 
         const xp = "//div[contains(@class, 'side-panel-body-content')]//div"
             + "/span[contains(text(),'Slight')]/.."

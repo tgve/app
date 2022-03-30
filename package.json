@@ -10,10 +10,12 @@
   },
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
-    "purge-tgvejs-react": "rm -rf node_modules/@tgve/tgvejs/node_modules/react/ && rm -rf node_modules/@tgve/tgvejs/node_modules/react-dom/",
-    "start": "yarn purge-tgvejs-react && react-scripts start",
+    "await-start-then-test": "wait-on http://localhost:3000/app && yarn test:e2e",
     "build": "react-scripts --max_old_space_size=8192 build",
     "build-local": "PUBLIC_URL=. GENERATE_SOURCEMAP=false yarn build",
+    "purge-tgvejs-react": "rm -rf node_modules/@tgve/tgvejs/node_modules/react/ && rm -rf node_modules/@tgve/tgvejs/node_modules/react-dom/",
+    "start": "yarn purge-tgvejs-react && react-scripts start",
+    "test": "concurrently --kill-others --success first \"yarn await-start-then-test\" \"yarn start\"",
     "test:e2e": "yarn purge-tgvejs-react && react-scripts test --testPathPattern=.*e2e.test.js$"
   },
   "eslintConfig": {
@@ -38,12 +40,14 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.8.3",
+    "concurrently": "^7.0.0",
     "http-server": "^14.0.0",
     "jest-canvas-mock": "^2.3.1",
     "jest-image-snapshot": "^4.5.1",
     "json": "^11.0.0",
     "puppeteer": "^13.5.1",
-    "react-scripts": "3.4.4"
+    "react-scripts": "3.4.4",
+    "wait-on": "^6.0.1"
   },
   "homepage": "https://tgve.github.io/app"
 }
