@@ -33,44 +33,29 @@ jobs:
           with:
             path: app
 
-        - name: Set homepage
-          # replace default values from the fork in `package.json`
-          run: |
-            set -x
-            cd app
-            npm install -g json
-            IFS="/" read -a a <<< ${{ github.repository }}
-            json -I -f package.json -e "this.homepage=\"https://${a[0]}.github.io/${a[1]}\""
-            # debug
-            cat package.json
         - name: Install
           run: |
             cd app
             yarn install  # CRA uses yarn by default
 
-        - name: Upgrade tgvejs
-          if: github.ref == 'refs/heads/release'
-          run: |
-            cd app
-            yarn upgrade @tgve/tgvejs --latest --caret
-            git config user.name github-actions
-            git config user.email github-actions@github.com
-            git add package.json yarn.lock
-            # default branch
-            if [[ `git status package.json yarn.lock --porcelain` ]]; then git commit -m "Upgrade tgvejs" && git push; else echo "No changes to commit"; fi
-
         - name: Checkout tgvejs (default branch)
           uses: actions/checkout@v2
           with:
+            repository: tgve/tgvejs
             path: tgvejs
 
-        - name: Test (inc e2e)
+        - name: Test (e2e)
           run: |
+            set -x
+            cd tgvejs
+              yarn install
+              yarn link
+              yarn dist
+            cd ..
             cd app
-            yarn build-local
-            yarn test
-            yarn test:e2e
-            
+              yarn build-local
+              yarn test:e2e
+
         - name: Upload Snapshots
           if: always()
           uses: actions/upload-artifact@v1
@@ -81,8 +66,10 @@ jobs:
         - name: Build [release]
           if: github.ref == 'refs/heads/release'
           run: |
+            set -x
             cd app
-            yarn run build
+            IFS="/" read -a a <<< ${{ github.repository }}
+            PUBLIC_URL="https://${a[0]}.github.io/${a[1]}" yarn build
           env:
             CI: false
             REACT_APP_DEFAULT_URL: https://raw.githubusercontent.com/tgve/example-data/main/casualties.csv
