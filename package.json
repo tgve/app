@@ -10,12 +10,12 @@
   },
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
-    "ardvaark": "wait-on http://localhost:3000/app && yarn test:e2e",
+    "await-start-then-test": "wait-on http://localhost:3000/app && yarn test:e2e",
     "build": "react-scripts --max_old_space_size=8192 build",
     "build-local": "PUBLIC_URL=. GENERATE_SOURCEMAP=false yarn build",
     "purge-tgvejs-react": "rm -rf node_modules/@tgve/tgvejs/node_modules/react/ && rm -rf node_modules/@tgve/tgvejs/node_modules/react-dom/",
     "start": "yarn purge-tgvejs-react && react-scripts start",
-    "test": "concurrently \"yarn start\" \"yarn ardvaark\"",
+    "test": "concurrently \"yarn start\" \"yarn await-start-then-test\"",
     "test:e2e": "yarn purge-tgvejs-react && react-scripts test --testPathPattern=.*e2e.test.js$"
   },
   "eslintConfig": {
