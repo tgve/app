@@ -33,28 +33,33 @@ jobs:
           with:
             path: app
 
-        - name: Install
-          run: |
-            cd app
-            yarn install  # CRA uses yarn by default
-
         - name: Checkout tgvejs (default branch)
           uses: actions/checkout@v2
           with:
             repository: tgve/tgvejs
             path: tgvejs
 
-        - name: Test (e2e)
+        - name: Install
+          run: |
+            cd app
+              yarn install
+            cd ..
+            cd tgvejs
+              yarn install
+
+        - name: Build [local]
           run: |
             set -x
             cd tgvejs
-              yarn install
               yarn link
               yarn dist
             cd ..
             cd app
+              yarn link @tgve/tgvejs
               yarn build-local
-              yarn test:e2e
+
+        - name: Test (e2e)
+          run: cd app && yarn test
 
         - name: Upload Snapshots
           if: always()
