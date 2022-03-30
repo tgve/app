@@ -1,28 +1,25 @@
 {
   "files": {
-    "main.css": "https://tgve.github.io/app/static/css/main.d1b05096.chunk.css",
-    "main.js": "https://tgve.github.io/app/static/js/main.20f8f99d.chunk.js",
-    "main.js.map": "https://tgve.github.io/app/static/js/main.20f8f99d.chunk.js.map",
-    "runtime-main.js": "https://tgve.github.io/app/static/js/runtime-main.c385f11e.js",
-    "runtime-main.js.map": "https://tgve.github.io/app/static/js/runtime-main.c385f11e.js.map",
-    "static/css/2.231d0962.chunk.css": "https://tgve.github.io/app/static/css/2.231d0962.chunk.css",
-    "static/js/2.aa5e6f79.chunk.js": "https://tgve.github.io/app/static/js/2.aa5e6f79.chunk.js",
-    "static/js/2.aa5e6f79.chunk.js.map": "https://tgve.github.io/app/static/js/2.aa5e6f79.chunk.js.map",
-    "static/js/3.c62b9eb5.chunk.js": "https://tgve.github.io/app/static/js/3.c62b9eb5.chunk.js",
-    "static/js/3.c62b9eb5.chunk.js.map": "https://tgve.github.io/app/static/js/3.c62b9eb5.chunk.js.map",
+    "main.css": "https://tgve.github.io/app/static/css/main.b9d54475.chunk.css",
+    "main.js": "https://tgve.github.io/app/static/js/main.0b842fb5.chunk.js",
+    "main.js.map": "https://tgve.github.io/app/static/js/main.0b842fb5.chunk.js.map",
+    "runtime-main.js": "https://tgve.github.io/app/static/js/runtime-main.82129b78.js",
+    "runtime-main.js.map": "https://tgve.github.io/app/static/js/runtime-main.82129b78.js.map",
+    "static/js/2.d2d4046f.chunk.js": "https://tgve.github.io/app/static/js/2.d2d4046f.chunk.js",
+    "static/js/2.d2d4046f.chunk.js.map": "https://tgve.github.io/app/static/js/2.d2d4046f.chunk.js.map",
+    "static/js/3.559731a2.chunk.js": "https://tgve.github.io/app/static/js/3.559731a2.chunk.js",
+    "static/js/3.559731a2.chunk.js.map": "https://tgve.github.io/app/static/js/3.559731a2.chunk.js.map",
     "index.html": "https://tgve.github.io/app/index.html",
-    "precache-manifest.ccd76c539697ca8a90fa56cf10e9ee2e.js": "https://tgve.github.io/app/precache-manifest.ccd76c539697ca8a90fa56cf10e9ee2e.js",
+    "precache-manifest.8823234d0766df6207a6796abfe7fe23.js": "https://tgve.github.io/app/precache-manifest.8823234d0766df6207a6796abfe7fe23.js",
     "service-worker.js": "https://tgve.github.io/app/service-worker.js",
-    "static/css/2.231d0962.chunk.css.map": "https://tgve.github.io/app/static/css/2.231d0962.chunk.css.map",
-    "static/css/main.d1b05096.chunk.css.map": "https://tgve.github.io/app/static/css/main.d1b05096.chunk.css.map",
-    "static/js/2.aa5e6f79.chunk.js.LICENSE.txt": "https://tgve.github.io/app/static/js/2.aa5e6f79.chunk.js.LICENSE.txt",
+    "static/css/main.b9d54475.chunk.css.map": "https://tgve.github.io/app/static/css/main.b9d54475.chunk.css.map",
+    "static/js/2.d2d4046f.chunk.js.LICENSE.txt": "https://tgve.github.io/app/static/js/2.d2d4046f.chunk.js.LICENSE.txt",
     "static/media/location-icon-atlas.png": "https://tgve.github.io/app/static/media/location-icon-atlas.37932833.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.c385f11e.js",
-    "static/css/2.231d0962.chunk.css",
-    "static/js/2.aa5e6f79.chunk.js",
-    "static/css/main.d1b05096.chunk.css",
-    "static/js/main.20f8f99d.chunk.js"
+    "static/js/runtime-main.82129b78.js",
+    "static/js/2.d2d4046f.chunk.js",
+    "static/css/main.b9d54475.chunk.css",
+    "static/js/main.0b842fb5.chunk.js"
   ]
 }
