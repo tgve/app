@@ -15,7 +15,7 @@
     "build-local": "PUBLIC_URL=. GENERATE_SOURCEMAP=false yarn build",
     "purge-tgvejs-react": "rm -rf node_modules/@tgve/tgvejs/node_modules/react/ && rm -rf node_modules/@tgve/tgvejs/node_modules/react-dom/",
     "start": "yarn purge-tgvejs-react && react-scripts start",
-    "test": "concurrently --kill-others --success last \"yarn start\" \"yarn await-start-then-test\"",
+    "test": "concurrently --success last \"yarn start\" \"yarn await-start-then-test\"",
     "test:e2e": "yarn purge-tgvejs-react && react-scripts test --testPathPattern=.*e2e.test.js$"
   },
   "eslintConfig": {
