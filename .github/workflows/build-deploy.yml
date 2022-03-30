@@ -55,8 +55,7 @@ jobs:
             cd app
               yarn link @tgve/tgvejs
               yarn build-local
-              yarn start &
-              yarn test:e2e
+              yarn test
 
         - name: Upload Snapshots
           if: always()
