@@ -33,6 +33,12 @@ jobs:
           with:
             path: app
 
+        - name: Checkout tgvejs (default branch)
+          uses: actions/checkout@v2
+          with:
+            repository: tgve/tgvejs
+            path: tgvejs
+
         - name: Install
           run: |
             cd app
@@ -40,12 +46,6 @@ jobs:
             cd ..
             cd tgvejs
               yarn install
-
-        - name: Checkout tgvejs (default branch)
-          uses: actions/checkout@v2
-          with:
-            repository: tgve/tgvejs
-            path: tgvejs
 
         - name: Build [local]
           run: |
