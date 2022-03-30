@@ -36,7 +36,7 @@ jobs:
         - name: Install
           run: |
             cd app
-            yarn install  # CRA uses yarn by default
+            yarn install
 
         - name: Checkout tgvejs (default branch)
           uses: actions/checkout@v2
