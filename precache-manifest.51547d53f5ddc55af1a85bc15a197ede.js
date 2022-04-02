@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9986276952d3ccc529bcacb2c9dd2dae",
+    "revision": "fb609fa53ff413461065c2797f8906c1",
     "url": "https://tgve.github.io/app/index.html"
   },
   {
-    "revision": "df91a022fcd83377a710",
+    "revision": "81d789fc84d2ea2fe6ca",
     "url": "https://tgve.github.io/app/static/css/main.b9d54475.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://tgve.github.io/app/static/js/3.559731a2.chunk.js"
   },
   {
-    "revision": "df91a022fcd83377a710",
-    "url": "https://tgve.github.io/app/static/js/main.07408da8.chunk.js"
+    "revision": "81d789fc84d2ea2fe6ca",
+    "url": "https://tgve.github.io/app/static/js/main.16bec85f.chunk.js"
   },
   {
     "revision": "fe2c039629228b48cd45",
