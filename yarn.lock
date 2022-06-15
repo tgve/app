@@ -2080,10 +2080,10 @@
   dependencies:
     "@babel/runtime" "^7.12.5"
 
-"@tgve/tgvejs@^1.4.6":
-  version "1.4.6"
-  resolved "https://registry.yarnpkg.com/@tgve/tgvejs/-/tgvejs-1.4.6.tgz#5afc2374d268b56e9aad785815eb0b3023316d10"
-  integrity sha512-oBDB4Yzfg2U1cz2h/mgrRLHd6B3TwTq+sU4VMVapFTQUvY1kR4bpaMObSTsjNCM2YNWH2OBnyOQMW7lBYR9a/g==
+"@tgve/tgvejs@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@tgve/tgvejs/-/tgvejs-1.5.0.tgz#484986726a9b229deb1c2f007455b3389eb928ac"
+  integrity sha512-Uty+g0EeTbrUmFmhrKlLzpPp0xSnuuBmjKTtTk1ikB6RgqCUL3hzvqqJvNzsmjl3J2u47nngV8T6L2cgj9HDSw==
   dependencies:
     "@turf/bbox" "^6.3.0"
     "@turf/bezier-spline" "^6.2.0"
@@ -2105,7 +2105,6 @@
     react-map-gl "5.2.1"
     react-router "^4.3.1"
     react-router-dom "^4.3.1"
-    react-scripts "3.4.4"
     react-vis "^1.11.7"
     styletron-engine-atomic "^1.4.6"
     styletron-react ">=5.2.2 < 7"
