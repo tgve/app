@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "https://tgve.github.io/app/static/css/main.b9d54475.chunk.css",
-    "main.js": "https://tgve.github.io/app/static/js/main.65ef483d.chunk.js",
-    "main.js.map": "https://tgve.github.io/app/static/js/main.65ef483d.chunk.js.map",
+    "main.js": "https://tgve.github.io/app/static/js/main.63faddd4.chunk.js",
+    "main.js.map": "https://tgve.github.io/app/static/js/main.63faddd4.chunk.js.map",
     "runtime-main.js": "https://tgve.github.io/app/static/js/runtime-main.b4f032a9.js",
     "runtime-main.js.map": "https://tgve.github.io/app/static/js/runtime-main.b4f032a9.js.map",
     "static/js/2.d639f395.chunk.js": "https://tgve.github.io/app/static/js/2.d639f395.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.eb5eb0ab.chunk.js": "https://tgve.github.io/app/static/js/3.eb5eb0ab.chunk.js",
     "static/js/3.eb5eb0ab.chunk.js.map": "https://tgve.github.io/app/static/js/3.eb5eb0ab.chunk.js.map",
     "index.html": "https://tgve.github.io/app/index.html",
-    "precache-manifest.7f9b0e59acdc6dc9af03664b870bd017.js": "https://tgve.github.io/app/precache-manifest.7f9b0e59acdc6dc9af03664b870bd017.js",
+    "precache-manifest.ef02da00709f4d44ac82e5ac0e7b0005.js": "https://tgve.github.io/app/precache-manifest.ef02da00709f4d44ac82e5ac0e7b0005.js",
     "service-worker.js": "https://tgve.github.io/app/service-worker.js",
     "static/css/main.b9d54475.chunk.css.map": "https://tgve.github.io/app/static/css/main.b9d54475.chunk.css.map",
     "static/js/2.d639f395.chunk.js.LICENSE.txt": "https://tgve.github.io/app/static/js/2.d639f395.chunk.js.LICENSE.txt",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.b4f032a9.js",
     "static/js/2.d639f395.chunk.js",
     "static/css/main.b9d54475.chunk.css",
-    "static/js/main.65ef483d.chunk.js"
+    "static/js/main.63faddd4.chunk.js"
   ]
 }
