@@ -46,7 +46,7 @@
     "jest-image-snapshot": "^4.5.1",
     "json": "^11.0.0",
     "puppeteer": "^13.5.1",
-    "react-scripts": "3.4.4",
+    "react-scripts": "^5.0.1",
     "wait-on": "^6.0.1"
   },
   "homepage": "https://tgve.github.io/app"
