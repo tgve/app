@@ -33,10 +33,11 @@ jobs:
           with:
             path: app
 
-        - name: Checkout tgvejs (default branch)
+        - name: Checkout tgvejs (release branch)
           uses: actions/checkout@v2
           with:
             repository: tgve/tgvejs
+            ref: release
             path: tgvejs
 
         - name: Install
