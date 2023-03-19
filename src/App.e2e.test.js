@@ -78,7 +78,7 @@ describe("App.js", () => {
         await waitForElementText('.side-panel > div > h2', "Nothing to show")
         const image = await screenshot();
         expect(image).toMatchImageSnapshot(setConfig());
-    });
+    }, timeout);
 
     it("check screenshot with data uploaded", async () => {
         await page.goto("http://localhost:3000/app"
@@ -86,7 +86,7 @@ describe("App.js", () => {
         await waitForElementText('.side-panel > div > h2', "100 rows")
         const image = await screenshot();
         expect(image).toMatchImageSnapshot(setConfig());
-    });
+    }, timeout);
 
     it("check screenshot with filter", async () => {
         await page.goto("http://localhost:3000/app"
@@ -101,5 +101,5 @@ describe("App.js", () => {
 
         const image = await screenshot()
         expect(image).toMatchImageSnapshot(setConfig())
-    })
+    }, timeout)
 })
