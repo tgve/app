@@ -64,7 +64,7 @@ describe("App.js", () => {
         await page.goto("http://localhost:3000/app"
             + "?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson");
         return waitForElementText('.side-panel > div > h2', "100 rows")
-    });
+    }, timeout);
 
 
     it("wrong URL: includes Nothing to show", async () => {
