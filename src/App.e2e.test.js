@@ -58,7 +58,7 @@ describe("App.js", () => {
     it("no URL: includes Nothing to show", async () => {
         await page.goto("http://localhost:3000/app");
         return waitForElementText('.side-panel > div > h2', "Nothing to show")
-    });
+    }, timeout);
 
     it("casualties_100: includes 100 rows", async () => {
         await page.goto("http://localhost:3000/app"
