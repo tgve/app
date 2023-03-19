@@ -71,7 +71,7 @@ describe("App.js", () => {
         await page.goto("http://localhost:3000/app"
             + "?defaultURL=https://wrongurl.fail");
         return waitForElementText('.side-panel > div > h2', "Nothing to show")
-    });
+    }, timeout);
 
     it("check screenshot", async () => {
         await page.goto("http://localhost:3000/app");
