@@ -78,7 +78,7 @@ jobs:
           env:
             CI: false
             REACT_APP_DEFAULT_URL: https://raw.githubusercontent.com/tgve/example-data/main/casualties.csv
-            REACT_APP_MAPBOX_ACCESS_TOKEN: ${{secrets.MAPBOX_KEY}}
+            # REACT_APP_MAPBOX_ACCESS_TOKEN: ${{secrets.MAPBOX_KEY}}
 
         - name: Deploy [release]
           if: github.ref == 'refs/heads/release'
