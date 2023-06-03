@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "https://tgve.github.io/app/static/css/main.6090b976.css",
-    "main.js": "https://tgve.github.io/app/static/js/main.303b96cf.js",
+    "main.js": "https://tgve.github.io/app/static/js/main.e6844d14.js",
     "static/js/787.93592f8e.chunk.js": "https://tgve.github.io/app/static/js/787.93592f8e.chunk.js",
     "static/media/location-icon-atlas.png": "https://tgve.github.io/app/static/media/location-icon-atlas.37a766e00c9900c1c40d.png",
     "index.html": "https://tgve.github.io/app/index.html",
     "main.6090b976.css.map": "https://tgve.github.io/app/static/css/main.6090b976.css.map",
-    "main.303b96cf.js.map": "https://tgve.github.io/app/static/js/main.303b96cf.js.map",
+    "main.e6844d14.js.map": "https://tgve.github.io/app/static/js/main.e6844d14.js.map",
     "787.93592f8e.chunk.js.map": "https://tgve.github.io/app/static/js/787.93592f8e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6090b976.css",
-    "static/js/main.303b96cf.js"
+    "static/js/main.e6844d14.js"
   ]
 }
