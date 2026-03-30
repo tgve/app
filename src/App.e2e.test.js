@@ -35,11 +35,12 @@ async function screenshot() {
     return page.screenshot({ fullPage: true });
 }
 
+jest.setTimeout(timeout)
+
 let browser;
 let page;
 
 beforeAll(async () => {
-    jest.setTimeout(timeout)
     browser = await puppeteer.launch({
         dumpio: true // if true then formidable amount of console logging
     })
