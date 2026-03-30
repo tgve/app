@@ -20,7 +20,7 @@ ADD . /app
 
 # build
 WORKDIR /app
-RUN yarn
+RUN yarn --ignore-engines
 RUN yarn run build-local
 RUN rm -rf node_modules
 
